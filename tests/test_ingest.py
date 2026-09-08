@@ -61,7 +61,6 @@ def test_7_duplicate_detection():
     dup_rows, summary = ingest.audit_exact_duplicates(df_train)
     assert summary['total_duplicate_rows'] == 0
     
-    # Verify exact observable duplicate pairs in train data
     feature_cols = config.INPUT_FEATURES
     dups_obs = df_train[df_train.duplicated(subset=feature_cols, keep=False)]
     assert len(dups_obs) == 24
@@ -88,3 +87,28 @@ def test_10_no_raw_data_mutation():
     ingest.run_full_quality_audit()
     hash_after = ingest.compute_file_hash(config.TRAIN_DATA_PATH)['sha256']
     assert hash_before == hash_after
+
+def test_11_forensic_negative_sensor_values_match_raw_data():
+    df_raw_tr = pd.read_csv(config.TRAIN_DATA_PATH)
+    df_raw_te = pd.read_csv(config.TEST_DATA_PATH)
+    
+    # Independently scan raw CSV files for negative values
+    neg_tr = df_raw_tr[df_raw_tr['Sensor_S2'] < 0]
+    neg_te = df_raw_te[df_raw_te['Sensor_S2'] < 0]
+    
+    assert len(neg_tr) == 1
+    assert neg_tr.iloc[0]['Test_ID'] == 'TRN-0203'
+    assert abs(neg_tr.iloc[0]['Sensor_S2'] - (-0.2015)) < 1e-4
+    
+    assert len(neg_te) == 1
+    assert neg_te.iloc[0]['Test_ID'] == 'TST-0213'
+    assert abs(neg_te.iloc[0]['Sensor_S2'] - (-1.5509)) < 1e-4
+    
+    # Compare against generated artifact
+    with open(config.ARTIFACTS_DIR / "data_quality" / "training_quality.json") as f:
+        tr_q = json.load(f)
+    with open(config.ARTIFACTS_DIR / "data_quality" / "test_quality.json") as f:
+        te_q = json.load(f)
+        
+    assert tr_q['distributions_and_iqr']['Sensor_S2']['min'] == -0.2015
+    assert te_q['distributions_and_iqr']['Sensor_S2']['min'] == -1.5509
