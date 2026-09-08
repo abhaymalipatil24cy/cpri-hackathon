@@ -1,0 +1,28 @@
+{
+  "dev_ids_count": 800,
+  "holdout_ids_count": 200,
+  "dev_hash": "a28f29299c6ca9da506dbe13f15cf8426ca47043cad89003569291ef374141db",
+  "holdout_hash": "7830563f8a7c36ee2279eb7ab0ef38a42dccb85c92b5979aa47e62610186aaba",
+  "random_seed": 42,
+  "split_method": "Stratified 80/20 train_test_split on Validity_Label",
+  "stratification_details": {
+    "dev_valid": 693,
+    "dev_invalid": 107,
+    "holdout_valid": 173,
+    "holdout_invalid": 27
+  },
+  "dev_sample_ids": [
+    "TRN-0193",
+    "TRN-0023",
+    "TRN-0805",
+    "TRN-0074",
+    "TRN-0457"
+  ],
+  "holdout_sample_ids": [
+    "TRN-0961",
+    "TRN-0825",
+    "TRN-0479",
+    "TRN-0294",
+    "TRN-0051"
+  ]
+}

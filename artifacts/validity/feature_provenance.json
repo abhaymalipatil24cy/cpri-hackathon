@@ -1,0 +1,188 @@
+{
+  "Applied_Voltage_kV": {
+    "source": "raw",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "Load_Current_A": {
+    "source": "raw",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "Ambient_Temperature_C": {
+    "source": "raw",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "Test_Duration_min": {
+    "source": "raw",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "S1_clean": {
+    "source": "fold-imputed",
+    "learned": true,
+    "learned_using": "fold_train median",
+    "oof_for_classifier": true
+  },
+  "S2_clean": {
+    "source": "fold-imputed",
+    "learned": true,
+    "learned_using": "fold_train median",
+    "oof_for_classifier": true
+  },
+  "S3_clean": {
+    "source": "fold-imputed",
+    "learned": true,
+    "learned_using": "fold_train median",
+    "oof_for_classifier": true
+  },
+  "S4_clean": {
+    "source": "fold-imputed",
+    "learned": true,
+    "learned_using": "fold_train median",
+    "oof_for_classifier": true
+  },
+  "Sensor_S1_missing": {
+    "source": "raw",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "Sensor_S2_missing": {
+    "source": "raw",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "Sensor_S3_missing": {
+    "source": "raw",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "Sensor_S4_missing": {
+    "source": "raw",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "Sensor_S1_imputed": {
+    "source": "raw-derived",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "Sensor_S2_imputed": {
+    "source": "raw-derived",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "Sensor_S3_imputed": {
+    "source": "raw-derived",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "S3_consistency_residual": {
+    "source": "CP5 OOF",
+    "learned": true,
+    "learned_using": "CP5 fold_train Ridge(alpha=1.0)",
+    "oof_for_classifier": true
+  },
+  "S3_abs_residual": {
+    "source": "CP5 OOF",
+    "learned": true,
+    "learned_using": "CP5 fold_train Ridge(alpha=1.0)",
+    "oof_for_classifier": true
+  },
+  "S3_consistency_z": {
+    "source": "CP5 OOF",
+    "learned": true,
+    "learned_using": "CP5 fold_train Ridge(alpha=1.0)",
+    "oof_for_classifier": true
+  },
+  "S3_minus_S1": {
+    "source": "derived",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "S3_minus_S2": {
+    "source": "derived",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "S2_minus_S1": {
+    "source": "derived",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "S3_to_S1_ratio": {
+    "source": "derived",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "power_proxy": {
+    "source": "derived",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "missing_count": {
+    "source": "raw-derived",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "imputed_count": {
+    "source": "raw-derived",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "negative_sensor_count": {
+    "source": "raw-derived",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "zero_sensor_count": {
+    "source": "raw-derived",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "sentinel_count": {
+    "source": "raw-derived",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "flag_negative_sensor": {
+    "source": "raw-derived",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "flag_sentinel": {
+    "source": "raw-derived",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  },
+  "flag_s3_s1_inconsistency": {
+    "source": "raw-derived",
+    "learned": false,
+    "learned_using": "N/A",
+    "oof_for_classifier": "N/A"
+  }
+}

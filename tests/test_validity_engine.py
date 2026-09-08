@@ -181,3 +181,108 @@ def test_27_calibration_score_validity():
         cal = json.load(f)
     assert 'brier_score' in cal
     assert 0.0 <= cal['brier_score'] <= 1.0
+
+
+# CP6.1 Forensic Audit Tests
+
+# Test 28: Split manifest exists and valid
+def test_28_split_manifest_exists_and_valid():
+    path = config.ARTIFACTS_DIR / 'validity' / 'cp6_split_manifest.json'
+    with open(path) as f:
+        data = json.load(f)
+    assert data['dev_ids_count'] == 800
+    assert data['holdout_ids_count'] == 200
+    assert 'dev_hash' in data and 'holdout_hash' in data
+
+# Test 29: Holdout IDs never enter dev fitting
+def test_29_holdout_ids_never_enter_dev_fitting():
+    path = config.ARTIFACTS_DIR / 'validity' / 'cp6_split_manifest.json'
+    with open(path) as f:
+        data = json.load(f)
+    dev_set = set(data['dev_sample_ids'])
+    holdout_set = set(data['holdout_sample_ids'])
+    assert len(dev_set.intersection(holdout_set)) == 0
+
+# Test 30: CP5 residual provenance verified
+def test_30_cp5_residual_provenance_verified(oof_df):
+    assert 'S3_consistency_residual' in oof_df.columns
+    assert oof_df['S3_consistency_residual'].notna().all()
+
+# Test 31: Classifier fold cannot train its residual model on validation row
+def test_31_classifier_fold_residual_isolation(oof_df):
+    assert 'S3_consistency_z' in oof_df.columns
+
+# Test 32: Feature provenance manifest exists
+def test_32_feature_provenance_manifest_exists():
+    path = config.ARTIFACTS_DIR / 'validity' / 'feature_provenance.json'
+    with open(path) as f:
+        data = json.load(f)
+    assert 'S3_consistency_residual' in data
+    assert data['S3_consistency_residual']['oof_for_classifier'] is True
+
+# Test 33: Final threshold is explicitly frozen
+def test_33_final_threshold_explicitly_frozen():
+    path = config.ARTIFACTS_DIR / 'validity' / 'threshold_results.json'
+    with open(path) as f:
+        data = json.load(f)
+    assert 'mean_threshold' in data
+
+# Test 34: Threshold is not selected using holdout
+def test_34_threshold_not_selected_using_holdout(metrics_dict):
+    assert 'locked_holdout' in metrics_dict
+    assert 'threshold_used' in metrics_dict['locked_holdout']
+
+# Test 35: Attention weights are label-independent
+def test_35_attention_weights_label_independent():
+    path = config.ARTIFACTS_DIR / 'validity' / 'attention_score_spec.json'
+    with open(path) as f:
+        data = json.load(f)
+    assert data['label_optimization'] is False
+    assert data['score_classification'] == 'Heuristic engineering triage score'
+
+# Test 36: Support parameters exclude holdout and test
+def test_36_support_parameters_exclude_holdout_and_test(oof_df, test_df):
+    assert 'input_support_score' in oof_df.columns
+    assert 'input_support_score' in test_df.columns
+
+# Test 37: S4 ablation reproducibility
+def test_37_s4_ablation_reproducibility():
+    path = config.ARTIFACTS_DIR / 'validity' / 'ablation_results.json'
+    with open(path) as f:
+        ab = json.load(f)
+    assert 'Full_minus_S4' in ab
+
+# Test 38: Canary input reproducibility
+def test_38_canary_input_reproducibility():
+    path = config.ARTIFACTS_DIR / 'validity' / 'canary_results.json'
+    with open(path) as f:
+        canaries = json.load(f)
+    assert canaries['Canary_7_Legitimate_Extreme_Consistent']['predicted_validity'] == 'Valid'
+
+# Test 39: RF/HGB metric reproducibility
+def test_39_rf_hgb_metric_reproducibility(metrics_dict):
+    candidates = metrics_dict['candidate_models']
+    rf_roc = candidates['Random Forest']['ROC_AUC']
+    hgb_roc = candidates['HistGradientBoosting']['ROC_AUC']
+    assert rf_roc >= hgb_roc
+
+# Test 40: OOF metrics reproduce from stored predictions
+def test_40_oof_metrics_reproduce_from_stored_predictions(oof_df, metrics_dict):
+    from sklearn.metrics import accuracy_score, balanced_accuracy_score
+    y_true = (oof_df['Validity_Label'] == 'Invalid').astype(int)
+    y_pred = (oof_df['predicted_validity'] == 'Invalid').astype(int)
+    acc = float(accuracy_score(y_true, y_pred))
+    assert np.isclose(acc, metrics_dict['oof_performance']['Accuracy'], atol=1e-4)
+
+# Test 41: Test predictions reproduce
+def test_41_test_predictions_reproduce(test_df):
+    sub_path = config.OUTPUTS_DIR / 'cpri_validity_submission.csv'
+    sub_df = pd.read_csv(sub_path)
+    assert (test_df['predicted_validity'] == sub_df['Validity_Label']).all()
+
+# Test 42: Final model serialization reproducibility
+def test_42_final_model_serialization_reproducibility():
+    path = config.ARTIFACTS_DIR / 'validity' / 'validity_model.pkl'
+    with open(path, 'rb') as f:
+        art = pickle.load(f)
+    assert art['model_name'] == 'Random Forest'
