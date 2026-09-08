@@ -1,0 +1,10 @@
+{
+  "training_rows": 1000,
+  "test_rows": 350,
+  "raw_hashes_preserved": true,
+  "exact_duplicates_removed": 0,
+  "observable_duplicate_groups": 12,
+  "observable_duplicate_rows": 24,
+  "imputed_cells_total": 21,
+  "target_protection_verified": "Reference_Parameter and Validity_Label absent from test dataset and unmodified in training dataset."
+}

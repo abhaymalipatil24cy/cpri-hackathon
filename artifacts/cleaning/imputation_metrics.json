@@ -1,0 +1,58 @@
+{
+  "Sensor_S1": {
+    "model": "Ridge(alpha=1.0)",
+    "predictors": [
+      "Applied_Voltage_kV",
+      "Load_Current_A",
+      "Ambient_Temperature_C",
+      "Test_Duration_min",
+      "Sensor_S2",
+      "Sensor_S3"
+    ],
+    "cv_folds": 5,
+    "R2_mean": 0.8459,
+    "R2_std": 0.0526,
+    "MAE_mean": 0.455,
+    "RMSE_mean": 1.5798
+  },
+  "Sensor_S2": {
+    "model": "Ridge(alpha=1.0)",
+    "predictors": [
+      "Applied_Voltage_kV",
+      "Load_Current_A",
+      "Ambient_Temperature_C",
+      "Test_Duration_min",
+      "Sensor_S1",
+      "Sensor_S3"
+    ],
+    "cv_folds": 5,
+    "R2_mean": 0.806,
+    "R2_std": 0.0102,
+    "MAE_mean": 0.5417,
+    "RMSE_mean": 1.7249
+  },
+  "Sensor_S3": {
+    "model": "Ridge(alpha=1.0)",
+    "predictors": [
+      "Applied_Voltage_kV",
+      "Load_Current_A",
+      "Ambient_Temperature_C",
+      "Test_Duration_min",
+      "Sensor_S1",
+      "Sensor_S2"
+    ],
+    "cv_folds": 5,
+    "R2_mean": 0.9031,
+    "R2_std": 0.0509,
+    "MAE_mean": 0.4684,
+    "RMSE_mean": 1.5644
+  },
+  "Sensor_S4": {
+    "model": "None (Preserved as missing)",
+    "predictors": [],
+    "reason": "S4 has near-zero correlation (|r|<0.07) with all operating variables and other sensors; reliable imputation is unfeasible.",
+    "R2_mean": null,
+    "MAE_mean": null,
+    "RMSE_mean": null
+  }
+}
