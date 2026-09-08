@@ -1,20 +1,23 @@
 {
+  "checkpoint": "CP5.2",
+  "primary_oof_estimator": "Ridge(alpha=1.0)",
+  "threshold_estimator": "Ridge(alpha=1.0)",
   "primary_analysis": "Analysis A (Originally observed S3 rows) is the primary scientific evidence for cross-sensor consistency.",
   "sensitivity_analysis": {
     "Analysis_A_observed_S3": {
       "count": 993,
-      "MAE": 0.7201092949832462,
-      "RMSE": 1.8275414120873958
+      "MAE": 0.47258349064196364,
+      "RMSE": 1.6357852234436496
     },
     "Analysis_B_imputed_S3": {
       "count": 7,
-      "MAE": 3.489248537326238,
-      "RMSE": 4.279125848421696
+      "MAE": 3.6078305864086793,
+      "RMSE": 4.490764983030828
     },
     "Analysis_C_all_rows": {
       "count": 1000,
-      "MAE": 0.7394932696796471,
-      "RMSE": 1.8559915640407818
+      "MAE": 0.49453022031233057,
+      "RMSE": 1.672791539638351
     }
   },
   "s4_conclusion": "S4 did not provide measurable incremental predictive value for S3 in the evaluated models."

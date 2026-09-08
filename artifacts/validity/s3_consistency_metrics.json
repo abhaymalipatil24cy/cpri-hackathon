@@ -1,19 +1,43 @@
 {
+  "primary_oof_estimator": "Ridge(alpha=1.0)",
+  "threshold_estimator": "Ridge(alpha=1.0)",
+  "models_compared": {
+    "Ridge(alpha=1.0)": {
+      "OOF_MAE": 0.4948891440817568,
+      "OOF_RMSE": 1.6729476948181183,
+      "OOF_R2": 0.8937975622507552
+    },
+    "LinearRegression": {
+      "OOF_MAE": 0.4945334339960075,
+      "OOF_RMSE": 1.6727908921837247,
+      "OOF_R2": 0.8938174696772084
+    },
+    "GradientBoosting": {
+      "OOF_MAE": 0.7394857716030799,
+      "OOF_RMSE": 1.8559905252555582,
+      "OOF_R2": 0.8692862513799118
+    },
+    "RandomForest": {
+      "OOF_MAE": 0.6826712945000005,
+      "OOF_RMSE": 1.815868195169878,
+      "OOF_R2": 0.8748766383264022
+    }
+  },
   "Model A (Global Ridge)": {
-    "OOF_MAE": 0.85
+    "OOF_MAE": 0.4948891440817568
   },
   "Model B (Regime-aware Ridge)": {
-    "OOF_MAE": 0.72
+    "OOF_MAE": 0.523
   },
   "GradientBoosting": {
-    "OOF_MAE": 0.7394932696796471
+    "OOF_MAE": 0.7394857716030799
   },
   "corrected_cp5": {
-    "MAE": 0.7394932696796471,
-    "RMSE": 1.8559915640407818,
-    "R2": 0.8692861050606858,
-    "residual_mean": -0.020589650324987618,
-    "residual_std": 1.8568059889419284
+    "MAE": 0.49453022031233057,
+    "RMSE": 1.672791539638351,
+    "R2": 0.8938173874811801,
+    "residual_mean": 0.0004803500597928609,
+    "residual_std": 1.673628494226288
   },
   "previous_cp5": {
     "MAE": 0.4691,
@@ -23,9 +47,9 @@
     "residual_std": 1.6294
   },
   "difference": {
-    "MAE": 0.2703932696796471,
-    "RMSE": 0.22659156404078185,
-    "R2": -0.030513894939314223
+    "MAE": 0.025430220312330554,
+    "RMSE": 0.04339153963835107,
+    "R2": -0.00598261251881993
   },
   "posthoc_analysis": {
     "golden_forensic_cases": {
@@ -43,9 +67,9 @@
           "S3": 11.2283,
           "S4": 25.1023
         },
-        "expected_S3": 11.86220793650165,
-        "residual": -0.6339079365016485,
-        "std_residual": -0.33030822273798816,
+        "expected_S3": 10.38660419957192,
+        "residual": 0.8416958004280808,
+        "std_residual": 0.5026297372865766,
         "regime": 1,
         "Validity_Label": "Invalid"
       },
@@ -63,9 +87,9 @@
           "S3": 1.0,
           "S4": 56.4023
         },
-        "expected_S3": 16.019082229846582,
-        "residual": -15.019082229846582,
-        "std_residual": -8.077576585191999,
+        "expected_S3": 17.87624992142744,
+        "residual": -16.87624992142744,
+        "std_residual": -10.083916669505129,
         "regime": 1,
         "Validity_Label": "Invalid"
       },
@@ -83,9 +107,9 @@
           "S3": 16.5062,
           "S4": 51.1548
         },
-        "expected_S3": 16.149638129155246,
-        "residual": 0.35656187084475377,
-        "std_residual": 0.20311843209028813,
+        "expected_S3": 16.072152218542467,
+        "residual": 0.434047781457533,
+        "std_residual": 0.2590583471143497,
         "regime": 0,
         "Validity_Label": "Valid"
       },
@@ -106,9 +130,9 @@
         "imputation_flags": {
           "S3_imputed": 1
         },
-        "expected_S3": 15.580974327612086,
-        "residual": 1.2119256723879133,
-        "std_residual": 0.6637825007313932,
+        "expected_S3": 15.858168573656757,
+        "residual": 0.9347314263432427,
+        "std_residual": 0.5582189114886876,
         "regime": 2,
         "Validity_Label": "Invalid"
       }

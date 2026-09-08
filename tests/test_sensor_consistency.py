@@ -278,3 +278,57 @@ def test_30_forensic_audit_artifact_schema():
         audit = json.load(f)
     assert audit['imputation_leakage_audit']['was_cp2_full_training_imputation_used_in_cp5_cv'] is True
     assert audit['threshold_origin_audit']['classification'] == 'Exploratory post-hoc observation'
+
+
+# CP5.2 Model Identity & Forensic Check Tests
+
+# Test 31: Metadata identifies primary estimator
+def test_31_metadata_identifies_primary_estimator():
+    path = config.ARTIFACTS_DIR / 'validity' / 's3_consistency_metadata.json'
+    with open(path) as f:
+        meta = json.load(f)
+    assert meta['primary_oof_estimator'] == 'Ridge(alpha=1.0)'
+
+# Test 32: Artifact estimator matches metadata
+def test_32_artifact_estimator_matches_metadata():
+    path = config.ARTIFACTS_DIR / 'validity' / 's3_consistency_model.pkl'
+    with open(path, 'rb') as f:
+        art = pickle.load(f)
+    from sklearn.linear_model import Ridge
+    assert isinstance(art['model'], Ridge)
+    assert art.get('model_name') == 'Ridge(alpha=1.0)'
+
+# Test 33: Reported metrics reproduce from OOF predictions
+def test_33_reported_metrics_reproduce_from_oof_predictions(oof_df, metrics_dict):
+    from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+    calc_mae = float(mean_absolute_error(oof_df['S3_actual'], oof_df['S3_expected']))
+    calc_rmse = float(np.sqrt(mean_squared_error(oof_df['S3_actual'], oof_df['S3_expected'])))
+    calc_r2 = float(r2_score(oof_df['S3_actual'], oof_df['S3_expected']))
+    
+    rep = metrics_dict['corrected_cp5']
+    assert np.isclose(calc_mae, rep['MAE'], atol=1e-5)
+    assert np.isclose(calc_rmse, rep['RMSE'], atol=1e-5)
+    assert np.isclose(calc_r2, rep['R2'], atol=1e-5)
+
+# Test 34: Residual calculation is reproducible
+def test_34_residual_calculation_reproducible(oof_df):
+    calc_res = oof_df['S3_actual'] - oof_df['S3_expected']
+    assert np.allclose(calc_res.values, oof_df['S3_consistency_residual'].values, atol=1e-5)
+
+# Test 35: Threshold evaluation identifies its estimator
+def test_35_threshold_evaluation_identifies_estimator():
+    path = config.ARTIFACTS_DIR / 'validity' / 'threshold_evaluation.json'
+    with open(path) as f:
+        data = json.load(f)
+    assert data['primary_residual_estimator'] == 'Ridge(alpha=1.0)'
+    assert data['threshold_evaluation_estimator'] == 'Ridge(alpha=1.0)'
+
+# Test 36: Primary and threshold estimators cannot be silently confused
+def test_36_primary_and_threshold_estimators_not_confused():
+    meta_path = config.ARTIFACTS_DIR / 'validity' / 's3_consistency_metadata.json'
+    thresh_path = config.ARTIFACTS_DIR / 'validity' / 'threshold_evaluation.json'
+    with open(meta_path) as f:
+        meta = json.load(f)
+    with open(thresh_path) as f:
+        thresh = json.load(f)
+    assert meta['primary_oof_estimator'] == thresh['threshold_evaluation_estimator']
