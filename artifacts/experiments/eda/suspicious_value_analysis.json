@@ -1,0 +1,138 @@
+{
+  "sentinel_25_occurrences": [
+    {
+      "Test_ID": "TRN-0523",
+      "sensor": "Sensor_S1",
+      "value": 25.0,
+      "Validity_Label": "Invalid",
+      "Reference_Parameter": 14.6204,
+      "Voltage": 11.8296,
+      "Current": 21.4584,
+      "Temp": 32.3691,
+      "Duration": 57.9892,
+      "S1": 25.0,
+      "S2": 7.3582,
+      "S3": 9.8972,
+      "S4": 38.2451
+    },
+    {
+      "Test_ID": "TRN-0124",
+      "sensor": "Sensor_S2",
+      "value": 25.0,
+      "Validity_Label": "Invalid",
+      "Reference_Parameter": 20.567,
+      "Voltage": 28.7059,
+      "Current": 44.4546,
+      "Temp": 28.3929,
+      "Duration": 31.8519,
+      "S1": 16.5947,
+      "S2": 25.0,
+      "S3": 21.7478,
+      "S4": 58.4106
+    },
+    {
+      "Test_ID": "TRN-0933",
+      "sensor": "Sensor_S2",
+      "value": 25.0,
+      "Validity_Label": "Invalid",
+      "Reference_Parameter": 14.744,
+      "Voltage": 17.3708,
+      "Current": 23.4709,
+      "Temp": 18.735,
+      "Duration": 59.2931,
+      "S1": 10.2461,
+      "S2": 25.0,
+      "S3": 13.3719,
+      "S4": 57.3816
+    },
+    {
+      "Test_ID": "TRN-0463",
+      "sensor": "Sensor_S2",
+      "value": 25.0,
+      "Validity_Label": "Invalid",
+      "Reference_Parameter": 15.7596,
+      "Voltage": 11.7153,
+      "Current": 40.6516,
+      "Temp": 40.7035,
+      "Duration": 20.2729,
+      "S1": 8.0814,
+      "S2": 25.0,
+      "S3": 10.1953,
+      "S4": 47.6679
+    },
+    {
+      "Test_ID": "TRN-0076",
+      "sensor": "Sensor_S3",
+      "value": 25.0,
+      "Validity_Label": "Invalid",
+      "Reference_Parameter": 19.0336,
+      "Voltage": 19.98,
+      "Current": 51.4139,
+      "Temp": 37.8555,
+      "Duration": 12.2375,
+      "S1": 12.5667,
+      "S2": 12.777,
+      "S3": 25.0,
+      "S4": 21.6472
+    },
+    {
+      "Test_ID": "TRN-0942",
+      "sensor": "Sensor_S3",
+      "value": 25.0,
+      "Validity_Label": "Invalid",
+      "Reference_Parameter": 42.6685,
+      "Voltage": 19.2054,
+      "Current": 107.1021,
+      "Temp": 18.0,
+      "Duration": 5.8085,
+      "S1": 15.358,
+      "S2": 16.4014,
+      "S3": 25.0,
+      "S4": 52.6974
+    }
+  ],
+  "sentinel_25_count": 6,
+  "sentinel_25_p_invalid": 1.0,
+  "negative_occurrences": [
+    {
+      "Test_ID": "TRN-0203",
+      "sensor": "Sensor_S2",
+      "value": -0.2015,
+      "Validity_Label": "Invalid",
+      "Reference_Parameter": 13.8386,
+      "Voltage": 12.9827,
+      "Current": 26.2827,
+      "Temp": 18.5198,
+      "Duration": 33.0949
+    }
+  ],
+  "zero_occurrences": [
+    {
+      "Test_ID": "TRN-0866",
+      "sensor": "Sensor_S1",
+      "value": 0.0,
+      "Validity_Label": "Invalid",
+      "Reference_Parameter": 14.4958,
+      "Voltage": 10.0427,
+      "Current": 38.7344
+    },
+    {
+      "Test_ID": "TRN-0652",
+      "sensor": "Sensor_S2",
+      "value": 0.0,
+      "Validity_Label": "Invalid",
+      "Reference_Parameter": 28.0562,
+      "Voltage": 27.089,
+      "Current": 62.907
+    },
+    {
+      "Test_ID": "TRN-0682",
+      "sensor": "Sensor_S3",
+      "value": 0.0,
+      "Validity_Label": "Invalid",
+      "Reference_Parameter": 18.6498,
+      "Voltage": 22.2018,
+      "Current": 29.935
+    }
+  ]
+}

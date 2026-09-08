@@ -1,0 +1,237 @@
+{
+  "total_duplicate_groups": 12,
+  "total_duplicate_rows": 24,
+  "all_groups_invalid": true,
+  "avg_group_ref_range": 11.8898,
+  "max_group_ref_range": 31.326,
+  "groups": [
+    {
+      "group_id": 1,
+      "row_count": 2,
+      "Test_IDs": [
+        "TRN-0829",
+        "TRN-0626"
+      ],
+      "ref_values": [
+        18.1979,
+        14.4551
+      ],
+      "ref_min": 14.4551,
+      "ref_max": 18.1979,
+      "ref_range": 3.7428,
+      "ref_std": 1.8714,
+      "validity_labels": [
+        "Invalid"
+      ]
+    },
+    {
+      "group_id": 2,
+      "row_count": 2,
+      "Test_IDs": [
+        "TRN-0069",
+        "TRN-0665"
+      ],
+      "ref_values": [
+        18.0376,
+        15.8353
+      ],
+      "ref_min": 15.8353,
+      "ref_max": 18.0376,
+      "ref_range": 2.2023,
+      "ref_std": 1.1012,
+      "validity_labels": [
+        "Invalid"
+      ]
+    },
+    {
+      "group_id": 3,
+      "row_count": 2,
+      "Test_IDs": [
+        "TRN-0267",
+        "TRN-0290"
+      ],
+      "ref_values": [
+        36.3126,
+        23.8671
+      ],
+      "ref_min": 23.8671,
+      "ref_max": 36.3126,
+      "ref_range": 12.4455,
+      "ref_std": 6.2228,
+      "validity_labels": [
+        "Invalid"
+      ]
+    },
+    {
+      "group_id": 4,
+      "row_count": 2,
+      "Test_IDs": [
+        "TRN-0185",
+        "TRN-0357"
+      ],
+      "ref_values": [
+        46.1158,
+        17.6333
+      ],
+      "ref_min": 17.6333,
+      "ref_max": 46.1158,
+      "ref_range": 28.4825,
+      "ref_std": 14.2413,
+      "validity_labels": [
+        "Invalid"
+      ]
+    },
+    {
+      "group_id": 5,
+      "row_count": 2,
+      "Test_IDs": [
+        "TRN-0346",
+        "TRN-0512"
+      ],
+      "ref_values": [
+        17.4079,
+        20.0655
+      ],
+      "ref_min": 17.4079,
+      "ref_max": 20.0655,
+      "ref_range": 2.6576,
+      "ref_std": 1.3288,
+      "validity_labels": [
+        "Invalid"
+      ]
+    },
+    {
+      "group_id": 6,
+      "row_count": 2,
+      "Test_IDs": [
+        "TRN-0168",
+        "TRN-0081"
+      ],
+      "ref_values": [
+        43.7129,
+        22.2325
+      ],
+      "ref_min": 22.2325,
+      "ref_max": 43.7129,
+      "ref_range": 21.4804,
+      "ref_std": 10.7402,
+      "validity_labels": [
+        "Invalid"
+      ]
+    },
+    {
+      "group_id": 7,
+      "row_count": 2,
+      "Test_IDs": [
+        "TRN-0154",
+        "TRN-0805"
+      ],
+      "ref_values": [
+        24.836,
+        30.0341
+      ],
+      "ref_min": 24.836,
+      "ref_max": 30.0341,
+      "ref_range": 5.1981,
+      "ref_std": 2.5991,
+      "validity_labels": [
+        "Invalid"
+      ]
+    },
+    {
+      "group_id": 8,
+      "row_count": 2,
+      "Test_IDs": [
+        "TRN-0623",
+        "TRN-0745"
+      ],
+      "ref_values": [
+        50.0012,
+        18.6752
+      ],
+      "ref_min": 18.6752,
+      "ref_max": 50.0012,
+      "ref_range": 31.326,
+      "ref_std": 15.663,
+      "validity_labels": [
+        "Invalid"
+      ]
+    },
+    {
+      "group_id": 9,
+      "row_count": 2,
+      "Test_IDs": [
+        "TRN-0743",
+        "TRN-0049"
+      ],
+      "ref_values": [
+        15.879,
+        18.2907
+      ],
+      "ref_min": 15.879,
+      "ref_max": 18.2907,
+      "ref_range": 2.4117,
+      "ref_std": 1.2059,
+      "validity_labels": [
+        "Invalid"
+      ]
+    },
+    {
+      "group_id": 10,
+      "row_count": 2,
+      "Test_IDs": [
+        "TRN-0589",
+        "TRN-0215"
+      ],
+      "ref_values": [
+        22.5337,
+        27.4716
+      ],
+      "ref_min": 22.5337,
+      "ref_max": 27.4716,
+      "ref_range": 4.9379,
+      "ref_std": 2.4689,
+      "validity_labels": [
+        "Invalid"
+      ]
+    },
+    {
+      "group_id": 11,
+      "row_count": 2,
+      "Test_IDs": [
+        "TRN-0945",
+        "TRN-0043"
+      ],
+      "ref_values": [
+        47.492,
+        28.2093
+      ],
+      "ref_min": 28.2093,
+      "ref_max": 47.492,
+      "ref_range": 19.2827,
+      "ref_std": 9.6413,
+      "validity_labels": [
+        "Invalid"
+      ]
+    },
+    {
+      "group_id": 12,
+      "row_count": 2,
+      "Test_IDs": [
+        "TRN-0209",
+        "TRN-0927"
+      ],
+      "ref_values": [
+        30.7826,
+        22.272
+      ],
+      "ref_min": 22.272,
+      "ref_max": 30.7826,
+      "ref_range": 8.5106,
+      "ref_std": 4.2553,
+      "validity_labels": [
+        "Invalid"
+      ]
+    }
+  ]
+}

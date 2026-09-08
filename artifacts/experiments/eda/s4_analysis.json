@@ -1,0 +1,42 @@
+{
+  "missing_count": 29,
+  "missing_percent": 2.9,
+  "validity_distribution_of_missing": {
+    "Valid": 29,
+    "Invalid": 0
+  },
+  "correlations_with_other_variables": {
+    "Applied_Voltage_kV": {
+      "pearson": -0.0487,
+      "spearman": -0.0506
+    },
+    "Load_Current_A": {
+      "pearson": -0.0167,
+      "spearman": -0.0127
+    },
+    "Ambient_Temperature_C": {
+      "pearson": 0.0073,
+      "spearman": 0.001
+    },
+    "Test_Duration_min": {
+      "pearson": -0.0211,
+      "spearman": -0.0168
+    },
+    "Sensor_S1": {
+      "pearson": -0.0322,
+      "spearman": -0.037
+    },
+    "Sensor_S2": {
+      "pearson": -0.0259,
+      "spearman": -0.0226
+    },
+    "Sensor_S3": {
+      "pearson": -0.0677,
+      "spearman": -0.0616
+    },
+    "Reference_Parameter": {
+      "pearson": 0.0021,
+      "spearman": -0.0205
+    }
+  }
+}

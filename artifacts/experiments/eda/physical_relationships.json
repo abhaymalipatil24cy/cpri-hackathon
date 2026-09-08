@@ -1,0 +1,13 @@
+{
+  "power_proxy_summary": {
+    "mean": 150808.4549,
+    "median": 93975.7925,
+    "valid_mean": 149650.059,
+    "invalid_mean": 158294.8043
+  },
+  "s3_minus_s1_summary": {
+    "mean": 3.4638,
+    "valid_mean": 3.4748,
+    "invalid_mean": 3.3931
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "Rule_A (Sensor < 0)": {
+    "number_flagged": 1,
+    "valid_flagged": 0,
+    "invalid_flagged": 1,
+    "precision": 1.0,
+    "recall": 0.0075,
+    "f1_score": 0.0149,
+    "valid_false_positive_rate": 0.0
+  },
+  "Rule_B (Sensor == 25)": {
+    "number_flagged": 6,
+    "valid_flagged": 0,
+    "invalid_flagged": 6,
+    "precision": 1.0,
+    "recall": 0.0448,
+    "f1_score": 0.0858,
+    "valid_false_positive_rate": 0.0
+  },
+  "Rule_C (Sensor in {18,25,55})": {
+    "number_flagged": 6,
+    "valid_flagged": 0,
+    "invalid_flagged": 6,
+    "precision": 1.0,
+    "recall": 0.0448,
+    "f1_score": 0.0858,
+    "valid_false_positive_rate": 0.0
+  },
+  "Rule_D (All S1-S3 missing)": {
+    "number_flagged": 0,
+    "valid_flagged": 0,
+    "invalid_flagged": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "valid_false_positive_rate": 0.0
+  },
+  "Rule_E (S3 < S1 - 5)": {
+    "number_flagged": 11,
+    "valid_flagged": 0,
+    "invalid_flagged": 11,
+    "precision": 1.0,
+    "recall": 0.0821,
+    "f1_score": 0.1517,
+    "valid_false_positive_rate": 0.0
+  },
+  "Rule_F (S3 < S1 - 5 & Current > Q75)": {
+    "number_flagged": 3,
+    "valid_flagged": 0,
+    "invalid_flagged": 3,
+    "precision": 1.0,
+    "recall": 0.0224,
+    "f1_score": 0.0438,
+    "valid_false_positive_rate": 0.0
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "class_counts": {
+    "Valid": 866,
+    "Invalid": 134,
+    "total": 1000
+  },
+  "feature_comparisons": {
+    "Applied_Voltage_kV": {
+      "valid_mean": 20.1092,
+      "invalid_mean": 20.3059,
+      "valid_median": 19.9802,
+      "invalid_median": 20.0242,
+      "valid_std": 7.1902,
+      "invalid_std": 6.7149,
+      "valid_range": [
+        8.0142,
+        31.9783
+      ],
+      "invalid_range": [
+        8.6911,
+        31.7051
+      ],
+      "cohens_d": 0.0276
+    },
+    "Load_Current_A": {
+      "valid_mean": 63.4722,
+      "invalid_mean": 61.979,
+      "valid_median": 64.1095,
+      "invalid_median": 62.6445,
+      "valid_std": 27.764,
+      "invalid_std": 28.741,
+      "valid_range": [
+        15.0079,
+        109.9526
+      ],
+      "invalid_range": [
+        15.5749,
+        109.8992
+      ],
+      "cohens_d": -0.0535
+    },
+    "Ambient_Temperature_C": {
+      "valid_mean": 34.1929,
+      "invalid_mean": 34.0997,
+      "valid_median": 34.5939,
+      "invalid_median": 34.1612,
+      "valid_std": 7.5076,
+      "invalid_std": 7.6094,
+      "valid_range": [
+        18.0,
+        55.0
+      ],
+      "invalid_range": [
+        18.0,
+        51.5397
+      ],
+      "cohens_d": -0.0124
+    },
+    "Test_Duration_min": {
+      "valid_mean": 31.6015,
+      "invalid_mean": 34.5074,
+      "valid_median": 31.3094,
+      "invalid_median": 33.2994,
+      "valid_std": 15.7793,
+      "invalid_std": 15.7486,
+      "valid_range": [
+        5.0434,
+        59.9745
+      ],
+      "invalid_range": [
+        5.4162,
+        59.6472
+      ],
+      "cohens_d": 0.1842
+    },
+    "Sensor_S1": {
+      "valid_mean": 13.5145,
+      "invalid_mean": 13.4761,
+      "valid_median": 13.6277,
+      "invalid_median": 13.647,
+      "valid_std": 3.8332,
+      "invalid_std": 5.4431,
+      "valid_range": [
+        4.8959,
+        21.8455
+      ],
+      "invalid_range": [
+        0.0,
+        28.5205
+      ],
+      "cohens_d": -0.0094
+    },
+    "Sensor_S2": {
+      "valid_mean": 13.6165,
+      "invalid_mean": 14.0091,
+      "valid_median": 13.5655,
+      "invalid_median": 13.9431,
+      "valid_std": 3.5063,
+      "invalid_std": 5.9756,
+      "valid_range": [
+        4.9854,
+        21.5969
+      ],
+      "invalid_range": [
+        -0.2015,
+        28.0601
+      ],
+      "cohens_d": 0.1
+    },
+    "Sensor_S3": {
+      "valid_mean": 16.9893,
+      "invalid_mean": 16.8691,
+      "valid_median": 16.947,
+      "invalid_median": 16.5966,
+      "valid_std": 4.9191,
+      "invalid_std": 6.4649,
+      "valid_range": [
+        6.5243,
+        27.2844
+      ],
+      "invalid_range": [
+        0.0,
+        35.7555
+      ],
+      "cohens_d": -0.0233
+    },
+    "Sensor_S4": {
+      "valid_mean": 49.5933,
+      "invalid_mean": 50.7784,
+      "valid_median": 49.0243,
+      "invalid_median": 52.7437,
+      "valid_std": 12.6071,
+      "invalid_std": 12.056,
+      "valid_range": [
+        11.4004,
+        87.7375
+      ],
+      "invalid_range": [
+        17.2785,
+        78.7172
+      ],
+      "cohens_d": 0.0946
+    },
+    "Reference_Parameter": {
+      "valid_mean": 26.748,
+      "invalid_mean": 26.3338,
+      "valid_median": 23.1039,
+      "invalid_median": 22.4029,
+      "valid_std": 10.743,
+      "invalid_std": 10.4095,
+      "valid_range": [
+        11.9183,
+        61.5848
+      ],
+      "invalid_range": [
+        13.8386,
+        55.6198
+      ],
+      "cohens_d": -0.0387
+    }
+  }
+}
