@@ -1,0 +1,19 @@
+{
+  "conformal_interval_claimed": false,
+  "conformal_statement": "No formal prediction interval is claimed; model disagreement is used only as a diagnostic stability indicator.",
+  "train_validity_margin_mean": 0.45168,
+  "test_validity_margin_mean": 0.47488571428571424,
+  "train_cv_validity_disagreement_mean": 0.009634066872475469,
+  "test_cv_validity_disagreement_mean": 0.007844746514098711,
+  "train_cv_regression_disagreement_mean": 0.3546309582687259,
+  "test_cv_regression_disagreement_mean": 0.4130288876702443,
+  "train_attention_score_mean": 1.884172071950053,
+  "test_attention_score_mean": 1.8385326078764703,
+  "test_attention_quantiles": {
+    "q25": 1.41293506108477,
+    "q50": 1.5226012468731012,
+    "q75": 1.6772168010910655,
+    "q90": 2.198927980265531
+  },
+  "spearman_corr_regression_disagreement_vs_abs_error": 0.4016249144444134
+}

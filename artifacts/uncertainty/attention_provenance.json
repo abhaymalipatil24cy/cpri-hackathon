@@ -1,0 +1,19 @@
+{
+  "label_independence_status": "VERIFIED_LABEL_INDEPENDENT",
+  "target_columns_excluded": [
+    "Reference_Parameter",
+    "Validity_Label"
+  ],
+  "formula": "3.0 * flag_negative + 3.0 * flag_sentinel + 2.0 * flag_inconsist + min(|z_S3|, 10) + N_imputed + N_missing + 2.0 * (1 - 2*|P - 0.5|) + 2.0 * (1 - centroid_support)",
+  "components_weights": {
+    "negative_sensor_flag": 3.0,
+    "sentinel_flag": 3.0,
+    "s3_s1_inconsistency_flag": 2.0,
+    "z_score_magnitude": 1.0,
+    "imputation_count": 1.0,
+    "missing_count": 1.0,
+    "model_uncertainty": 2.0,
+    "centroid_distance": 2.0
+  },
+  "audit_result": "Attention score is purely label-independent, constructed solely from observed inputs, consistency features, model probability margin, and operating support."
+}

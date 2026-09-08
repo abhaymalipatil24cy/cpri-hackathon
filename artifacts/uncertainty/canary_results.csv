@@ -1,0 +1,11 @@
+canary_name,flag_negative_sensor,flag_sentinel,flag_inconsistency,z_score,imputed_count,missing_count,P_invalid,operating_space_support,total_attention_score
+1. Clean Normal Point,0,0,0,0.1,0,0,0.05,0.7,0.9
+2. Negative Sensor,1,0,0,0.2,0,0,0.85,0.5,4.8
+3. Sentinel 25 Value,0,1,0,0.5,0,0,0.9,0.45,5.0
+4. Large S3 Inconsistency,0,0,1,4.5,0,0,0.75,0.4,8.7
+5. Missing S1-S3 Sensors,0,0,0,0.0,3,3,0.95,0.3,7.6
+6. Missing S4 Sensor,0,0,0,0.1,0,1,0.15,0.35,3.0
+7. Low Operating Space Support,0,0,0,0.2,0,0,0.2,0.15,2.7
+8. High Current Operating Point,0,0,0,0.3,0,0,0.25,0.22,2.86
+9. Extreme Sensor Consistent,0,0,0,1.2,0,0,0.1,0.6,2.4
+10. Multiple Simultaneous Signals,1,1,1,8.0,2,1,0.99,0.18,20.68
