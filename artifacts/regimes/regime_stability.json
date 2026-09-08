@@ -1,0 +1,8 @@
+{
+  "n_clusters": 4,
+  "n_bootstraps": 10,
+  "mean_adjusted_rand_index": 0.4937,
+  "std_adjusted_rand_index": 0.2299,
+  "min_adjusted_rand_index": 0.2456,
+  "max_adjusted_rand_index": 0.9038
+}

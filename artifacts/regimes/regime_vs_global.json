@@ -1,0 +1,47 @@
+{
+  "Sensor_S1": {
+    "global_variance": 16.6674,
+    "pooled_regime_variance": 9.1225,
+    "variance_reduction_percent": 45.2671
+  },
+  "Sensor_S2": {
+    "global_variance": 15.4165,
+    "pooled_regime_variance": 8.4516,
+    "variance_reduction_percent": 45.1783
+  },
+  "Sensor_S3": {
+    "global_variance": 26.5178,
+    "pooled_regime_variance": 14.3289,
+    "variance_reduction_percent": 45.965
+  },
+  "Sensor_S4": {
+    "global_variance": 157.079,
+    "pooled_regime_variance": 157.1365,
+    "variance_reduction_percent": -0.0366
+  },
+  "Applied_Voltage_kV": {
+    "global_variance": 50.7719,
+    "pooled_regime_variance": 24.7565,
+    "variance_reduction_percent": 51.2398
+  },
+  "Load_Current_A": {
+    "global_variance": 777.6767,
+    "pooled_regime_variance": 288.9606,
+    "variance_reduction_percent": 62.8431
+  },
+  "Ambient_Temperature_C": {
+    "global_variance": 56.5137,
+    "pooled_regime_variance": 56.4325,
+    "variance_reduction_percent": 0.1437
+  },
+  "Test_Duration_min": {
+    "global_variance": 249.5889,
+    "pooled_regime_variance": 135.2678,
+    "variance_reduction_percent": 45.8038
+  },
+  "Reference_Parameter": {
+    "global_variance": 114.3782,
+    "pooled_regime_variance": 61.0983,
+    "variance_reduction_percent": 46.5822
+  }
+}

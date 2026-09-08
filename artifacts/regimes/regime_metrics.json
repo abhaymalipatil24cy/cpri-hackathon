@@ -1,0 +1,68 @@
+{
+  "candidate_evaluations": {
+    "k=4": {
+      "k": 4,
+      "silhouette_score": 0.1919,
+      "cluster_sizes": [
+        252,
+        265,
+        240,
+        243
+      ],
+      "minimum_cluster_size": 240,
+      "maximum_cluster_size": 265,
+      "cluster_balance_ratio": 0.9057
+    },
+    "k=5": {
+      "k": 5,
+      "silhouette_score": 0.1933,
+      "cluster_sizes": [
+        231,
+        185,
+        221,
+        192,
+        171
+      ],
+      "minimum_cluster_size": 171,
+      "maximum_cluster_size": 231,
+      "cluster_balance_ratio": 0.7403
+    },
+    "k=6": {
+      "k": 6,
+      "silhouette_score": 0.1984,
+      "cluster_sizes": [
+        196,
+        160,
+        148,
+        174,
+        149,
+        173
+      ],
+      "minimum_cluster_size": 148,
+      "maximum_cluster_size": 196,
+      "cluster_balance_ratio": 0.7551
+    }
+  },
+  "selected_k": 4,
+  "selection_justification": "k=4 achieves optimal balance across operating space with min cluster size 240 (24% of data) and 0.1919 silhouette score.",
+  "training_cluster_sizes": [
+    252,
+    265,
+    240,
+    243
+  ],
+  "test_cluster_sizes": [
+    99,
+    87,
+    83,
+    81
+  ],
+  "stability": {
+    "n_clusters": 4,
+    "n_bootstraps": 10,
+    "mean_adjusted_rand_index": 0.4937,
+    "std_adjusted_rand_index": 0.2299,
+    "min_adjusted_rand_index": 0.2456,
+    "max_adjusted_rand_index": 0.9038
+  }
+}
