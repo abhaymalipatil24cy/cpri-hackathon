@@ -1,0 +1,368 @@
+{
+  "dataset": "training",
+  "file_hash": {
+    "filepath": "C:\\Users\\ROG\\cpri-hackathon\\data\\training_data.csv",
+    "sha256": "fcb977165f73c3772bfa595de415244f7589766b320fd9aaebbc0cc665b31aaa",
+    "file_size_bytes": 86501,
+    "row_count": 1000,
+    "column_count": 11
+  },
+  "schema_validation": {
+    "is_valid": true,
+    "missing_columns": [],
+    "unexpected_columns": [],
+    "duplicate_column_names": [],
+    "is_order_matching": true,
+    "actual_columns": [
+      "Test_ID",
+      "Applied_Voltage_kV",
+      "Load_Current_A",
+      "Ambient_Temperature_C",
+      "Test_Duration_min",
+      "Sensor_S1",
+      "Sensor_S2",
+      "Sensor_S3",
+      "Sensor_S4",
+      "Reference_Parameter",
+      "Validity_Label"
+    ],
+    "dtypes": {
+      "Test_ID": "str",
+      "Applied_Voltage_kV": "float64",
+      "Load_Current_A": "float64",
+      "Ambient_Temperature_C": "float64",
+      "Test_Duration_min": "float64",
+      "Sensor_S1": "float64",
+      "Sensor_S2": "float64",
+      "Sensor_S3": "float64",
+      "Sensor_S4": "float64",
+      "Reference_Parameter": "float64",
+      "Validity_Label": "str"
+    }
+  },
+  "coercion_summary": {
+    "total_coercion_failures": 0,
+    "failed_columns": []
+  },
+  "missingness_stats": {
+    "Test_ID": {
+      "dtype": "str",
+      "row_count": 1000,
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_count": 1000
+    },
+    "Applied_Voltage_kV": {
+      "dtype": "float64",
+      "row_count": 1000,
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_count": 988,
+      "min": 8.0142,
+      "max": 31.9783,
+      "mean": 20.135588300000002,
+      "median": 19.985,
+      "std": 7.125441616113189
+    },
+    "Load_Current_A": {
+      "dtype": "float64",
+      "row_count": 1000,
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_count": 988,
+      "min": 15.0079,
+      "max": 109.9526,
+      "mean": 63.2721393,
+      "median": 63.7113,
+      "std": 27.88685446960906
+    },
+    "Ambient_Temperature_C": {
+      "dtype": "float64",
+      "row_count": 1000,
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_count": 967,
+      "min": 18.0,
+      "max": 55.0,
+      "mean": 34.1803927,
+      "median": 34.589150000000004,
+      "std": 7.51755952936152
+    },
+    "Test_Duration_min": {
+      "dtype": "float64",
+      "row_count": 1000,
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_count": 985,
+      "min": 5.0434,
+      "max": 59.9745,
+      "mean": 31.9908627,
+      "median": 31.83625,
+      "std": 15.798382753440395
+    },
+    "Sensor_S1": {
+      "dtype": "float64",
+      "row_count": 1000,
+      "missing_count": 6,
+      "missing_percent": 0.6,
+      "unique_count": 975,
+      "min": 0.0,
+      "max": 28.5205,
+      "mean": 13.503142555331992,
+      "median": 13.627749999999999,
+      "std": 4.084499884790287
+    },
+    "Sensor_S2": {
+      "dtype": "float64",
+      "row_count": 1000,
+      "missing_count": 2,
+      "missing_percent": 0.2,
+      "unique_count": 982,
+      "min": -0.2015,
+      "max": 28.0601,
+      "mean": 13.663168737474951,
+      "median": 13.57855,
+      "std": 3.926916076132973
+    },
+    "Sensor_S3": {
+      "dtype": "float64",
+      "row_count": 1000,
+      "missing_count": 7,
+      "missing_percent": 0.7,
+      "unique_count": 974,
+      "min": 0.0,
+      "max": 35.7555,
+      "mean": 16.967139577039276,
+      "median": 16.9269,
+      "std": 5.154166679815583
+    },
+    "Sensor_S4": {
+      "dtype": "float64",
+      "row_count": 1000,
+      "missing_count": 29,
+      "missing_percent": 2.9,
+      "unique_count": 958,
+      "min": 11.4004,
+      "max": 87.7375,
+      "mean": 49.75686477857879,
+      "median": 49.4543,
+      "std": 12.533115716289895
+    },
+    "Reference_Parameter": {
+      "dtype": "float64",
+      "row_count": 1000,
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_count": 999,
+      "min": 11.9183,
+      "max": 61.5848,
+      "mean": 26.692486100000004,
+      "median": 23.018250000000002,
+      "std": 10.694772214993051
+    },
+    "Validity_Label": {
+      "dtype": "str",
+      "row_count": 1000,
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_count": 2
+    }
+  },
+  "negatives_and_zeros": {
+    "Applied_Voltage_kV": {
+      "negative_count": 0,
+      "negative_percent": 0.0,
+      "zero_count": 0,
+      "zero_percent": 0.0
+    },
+    "Load_Current_A": {
+      "negative_count": 0,
+      "negative_percent": 0.0,
+      "zero_count": 0,
+      "zero_percent": 0.0
+    },
+    "Ambient_Temperature_C": {
+      "negative_count": 0,
+      "negative_percent": 0.0,
+      "zero_count": 0,
+      "zero_percent": 0.0
+    },
+    "Test_Duration_min": {
+      "negative_count": 0,
+      "negative_percent": 0.0,
+      "zero_count": 0,
+      "zero_percent": 0.0
+    },
+    "Sensor_S1": {
+      "negative_count": 0,
+      "negative_percent": 0.0,
+      "zero_count": 1,
+      "zero_percent": 0.1
+    },
+    "Sensor_S2": {
+      "negative_count": 1,
+      "negative_percent": 0.1,
+      "zero_count": 1,
+      "zero_percent": 0.1
+    },
+    "Sensor_S3": {
+      "negative_count": 0,
+      "negative_percent": 0.0,
+      "zero_count": 1,
+      "zero_percent": 0.1
+    },
+    "Sensor_S4": {
+      "negative_count": 0,
+      "negative_percent": 0.0,
+      "zero_count": 0,
+      "zero_percent": 0.0
+    }
+  },
+  "exact_duplicates": {
+    "total_duplicate_rows": 0,
+    "duplicate_groups_count": 0,
+    "duplicate_test_ids_count": 0
+  },
+  "near_duplicates": {
+    "near_duplicate_criterion": "Euclidean distance on standardized features <= 0.002828",
+    "total_near_dup_groups": 12,
+    "conflicting_near_dup_rows": 0
+  },
+  "distributions_and_iqr": {
+    "Applied_Voltage_kV": {
+      "min": 8.0142,
+      "max": 31.9783,
+      "mean": 20.135588300000002,
+      "median": 19.985,
+      "std": 7.125441616113189,
+      "Q1": 14.011275,
+      "Q3": 26.72275,
+      "IQR": 12.711475000000002,
+      "lower_iqr_bound": -5.055937500000004,
+      "upper_iqr_bound": 45.7899625,
+      "count_below_lower_bound": 0,
+      "count_above_upper_bound": 0
+    },
+    "Load_Current_A": {
+      "min": 15.0079,
+      "max": 109.9526,
+      "mean": 63.2721393,
+      "median": 63.7113,
+      "std": 27.88685446960906,
+      "Q1": 39.316449999999996,
+      "Q3": 87.649725,
+      "IQR": 48.33327500000001,
+      "lower_iqr_bound": -33.18346250000001,
+      "upper_iqr_bound": 160.1496375,
+      "count_below_lower_bound": 0,
+      "count_above_upper_bound": 0
+    },
+    "Ambient_Temperature_C": {
+      "min": 18.0,
+      "max": 55.0,
+      "mean": 34.1803927,
+      "median": 34.589150000000004,
+      "std": 7.51755952936152,
+      "Q1": 28.8416,
+      "Q3": 39.08165,
+      "IQR": 10.240050000000004,
+      "lower_iqr_bound": 13.481524999999994,
+      "upper_iqr_bound": 54.441725000000005,
+      "count_below_lower_bound": 0,
+      "count_above_upper_bound": 4
+    },
+    "Test_Duration_min": {
+      "min": 5.0434,
+      "max": 59.9745,
+      "mean": 31.9908627,
+      "median": 31.83625,
+      "std": 15.798382753440395,
+      "Q1": 18.493,
+      "Q3": 45.3408,
+      "IQR": 26.847800000000003,
+      "lower_iqr_bound": -21.778700000000004,
+      "upper_iqr_bound": 85.61250000000001,
+      "count_below_lower_bound": 0,
+      "count_above_upper_bound": 0
+    },
+    "Sensor_S1": {
+      "min": 0.0,
+      "max": 28.5205,
+      "mean": 13.503142555331992,
+      "median": 13.627749999999999,
+      "std": 4.084499884790287,
+      "Q1": 10.470925000000001,
+      "Q3": 16.508225000000003,
+      "IQR": 6.037300000000002,
+      "lower_iqr_bound": 1.4149749999999983,
+      "upper_iqr_bound": 25.564175000000006,
+      "count_below_lower_bound": 4,
+      "count_above_upper_bound": 1
+    },
+    "Sensor_S2": {
+      "min": -0.2015,
+      "max": 28.0601,
+      "mean": 13.663168737474951,
+      "median": 13.57855,
+      "std": 3.926916076132973,
+      "Q1": 10.867375,
+      "Q3": 16.341875,
+      "IQR": 5.474500000000003,
+      "lower_iqr_bound": 2.6556249999999952,
+      "upper_iqr_bound": 24.553625000000004,
+      "count_below_lower_bound": 6,
+      "count_above_upper_bound": 8
+    },
+    "Sensor_S3": {
+      "min": 0.0,
+      "max": 35.7555,
+      "mean": 16.967139577039276,
+      "median": 16.9269,
+      "std": 5.154166679815583,
+      "Q1": 12.851,
+      "Q3": 21.3608,
+      "IQR": 8.5098,
+      "lower_iqr_bound": 0.0862999999999996,
+      "upper_iqr_bound": 34.1255,
+      "count_below_lower_bound": 1,
+      "count_above_upper_bound": 1
+    },
+    "Sensor_S4": {
+      "min": 11.4004,
+      "max": 87.7375,
+      "mean": 49.75686477857879,
+      "median": 49.4543,
+      "std": 12.533115716289895,
+      "Q1": 41.77755,
+      "Q3": 57.65885,
+      "IQR": 15.881300000000003,
+      "lower_iqr_bound": 17.955599999999993,
+      "upper_iqr_bound": 81.4808,
+      "count_below_lower_bound": 6,
+      "count_above_upper_bound": 5
+    }
+  },
+  "validity_label_audit": {
+    "unique_labels": [
+      "Valid",
+      "Invalid"
+    ],
+    "counts": {
+      "Valid": 866,
+      "Invalid": 134
+    },
+    "missing_count": 0,
+    "missing_percent": 0.0
+  },
+  "reference_parameter_audit": {
+    "missing_count": 0,
+    "missing_percent": 0.0,
+    "min": 11.9183,
+    "max": 61.5848,
+    "mean": 26.692486100000004,
+    "median": 23.018250000000002,
+    "std": 10.694772214993051,
+    "q25": 18.415550000000003,
+    "q75": 33.44365
+  }
+}

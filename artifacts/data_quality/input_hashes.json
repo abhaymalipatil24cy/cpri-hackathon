@@ -1,0 +1,16 @@
+{
+  "training": {
+    "filepath": "C:\\Users\\ROG\\cpri-hackathon\\data\\training_data.csv",
+    "sha256": "fcb977165f73c3772bfa595de415244f7589766b320fd9aaebbc0cc665b31aaa",
+    "file_size_bytes": 86501,
+    "row_count": 1000,
+    "column_count": 11
+  },
+  "test": {
+    "filepath": "C:\\Users\\ROG\\cpri-hackathon\\data\\test_data.csv",
+    "sha256": "cbb8aa49ecd68fb29dd2164b13f3052b86fc749d88882640dcce060d71c5a53f",
+    "file_size_bytes": 25383,
+    "row_count": 350,
+    "column_count": 9
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "training": {
+    "18.0": {
+      "Sensor_S1": {
+        "count": 0,
+        "percentage": 0.0,
+        "unique_test_ids": 0,
+        "valid_count": 0,
+        "invalid_count": 0,
+        "avg_applied_voltage": null,
+        "avg_load_current": null,
+        "avg_test_duration": null
+      },
+      "Sensor_S2": {
+        "count": 0,
+        "percentage": 0.0,
+        "unique_test_ids": 0,
+        "valid_count": 0,
+        "invalid_count": 0,
+        "avg_applied_voltage": null,
+        "avg_load_current": null,
+        "avg_test_duration": null
+      },
+      "Sensor_S3": {
+        "count": 0,
+        "percentage": 0.0,
+        "unique_test_ids": 0,
+        "valid_count": 0,
+        "invalid_count": 0,
+        "avg_applied_voltage": null,
+        "avg_load_current": null,
+        "avg_test_duration": null
+      }
+    },
+    "25.0": {
+      "Sensor_S1": {
+        "count": 1,
+        "percentage": 0.1,
+        "unique_test_ids": 1,
+        "valid_count": 0,
+        "invalid_count": 1,
+        "avg_applied_voltage": 11.8296,
+        "avg_load_current": 21.4584,
+        "avg_test_duration": 57.9892
+      },
+      "Sensor_S2": {
+        "count": 3,
+        "percentage": 0.3,
+        "unique_test_ids": 3,
+        "valid_count": 0,
+        "invalid_count": 3,
+        "avg_applied_voltage": 19.264,
+        "avg_load_current": 36.192366666666665,
+        "avg_test_duration": 37.1393
+      },
+      "Sensor_S3": {
+        "count": 2,
+        "percentage": 0.2,
+        "unique_test_ids": 2,
+        "valid_count": 0,
+        "invalid_count": 2,
+        "avg_applied_voltage": 19.5927,
+        "avg_load_current": 79.258,
+        "avg_test_duration": 9.023
+      }
+    },
+    "55.0": {
+      "Sensor_S1": {
+        "count": 0,
+        "percentage": 0.0,
+        "unique_test_ids": 0,
+        "valid_count": 0,
+        "invalid_count": 0,
+        "avg_applied_voltage": null,
+        "avg_load_current": null,
+        "avg_test_duration": null
+      },
+      "Sensor_S2": {
+        "count": 0,
+        "percentage": 0.0,
+        "unique_test_ids": 0,
+        "valid_count": 0,
+        "invalid_count": 0,
+        "avg_applied_voltage": null,
+        "avg_load_current": null,
+        "avg_test_duration": null
+      },
+      "Sensor_S3": {
+        "count": 0,
+        "percentage": 0.0,
+        "unique_test_ids": 0,
+        "valid_count": 0,
+        "invalid_count": 0,
+        "avg_applied_voltage": null,
+        "avg_load_current": null,
+        "avg_test_duration": null
+      }
+    }
+  },
+  "test": {
+    "18.0": {
+      "Sensor_S1": {
+        "count": 0,
+        "percentage": 0.0,
+        "unique_test_ids": 0,
+        "valid_count": null,
+        "invalid_count": null,
+        "avg_applied_voltage": null,
+        "avg_load_current": null,
+        "avg_test_duration": null
+      },
+      "Sensor_S2": {
+        "count": 0,
+        "percentage": 0.0,
+        "unique_test_ids": 0,
+        "valid_count": null,
+        "invalid_count": null,
+        "avg_applied_voltage": null,
+        "avg_load_current": null,
+        "avg_test_duration": null
+      },
+      "Sensor_S3": {
+        "count": 0,
+        "percentage": 0.0,
+        "unique_test_ids": 0,
+        "valid_count": null,
+        "invalid_count": null,
+        "avg_applied_voltage": null,
+        "avg_load_current": null,
+        "avg_test_duration": null
+      }
+    },
+    "25.0": {
+      "Sensor_S1": {
+        "count": 1,
+        "percentage": 0.2857,
+        "unique_test_ids": 1,
+        "valid_count": null,
+        "invalid_count": null,
+        "avg_applied_voltage": 11.1969,
+        "avg_load_current": 39.4963,
+        "avg_test_duration": 25.0844
+      },
+      "Sensor_S2": {
+        "count": 1,
+        "percentage": 0.2857,
+        "unique_test_ids": 1,
+        "valid_count": null,
+        "invalid_count": null,
+        "avg_applied_voltage": 10.7522,
+        "avg_load_current": 61.401,
+        "avg_test_duration": 57.5273
+      },
+      "Sensor_S3": {
+        "count": 0,
+        "percentage": 0.0,
+        "unique_test_ids": 0,
+        "valid_count": null,
+        "invalid_count": null,
+        "avg_applied_voltage": null,
+        "avg_load_current": null,
+        "avg_test_duration": null
+      }
+    },
+    "55.0": {
+      "Sensor_S1": {
+        "count": 0,
+        "percentage": 0.0,
+        "unique_test_ids": 0,
+        "valid_count": null,
+        "invalid_count": null,
+        "avg_applied_voltage": null,
+        "avg_load_current": null,
+        "avg_test_duration": null
+      },
+      "Sensor_S2": {
+        "count": 0,
+        "percentage": 0.0,
+        "unique_test_ids": 0,
+        "valid_count": null,
+        "invalid_count": null,
+        "avg_applied_voltage": null,
+        "avg_load_current": null,
+        "avg_test_duration": null
+      },
+      "Sensor_S3": {
+        "count": 0,
+        "percentage": 0.0,
+        "unique_test_ids": 0,
+        "valid_count": null,
+        "invalid_count": null,
+        "avg_applied_voltage": null,
+        "avg_load_current": null,
+        "avg_test_duration": null
+      }
+    }
+  }
+}

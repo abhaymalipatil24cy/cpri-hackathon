@@ -1,0 +1,319 @@
+{
+  "dataset": "test",
+  "file_hash": {
+    "filepath": "C:\\Users\\ROG\\cpri-hackathon\\data\\test_data.csv",
+    "sha256": "cbb8aa49ecd68fb29dd2164b13f3052b86fc749d88882640dcce060d71c5a53f",
+    "file_size_bytes": 25383,
+    "row_count": 350,
+    "column_count": 9
+  },
+  "schema_validation": {
+    "is_valid": true,
+    "missing_columns": [],
+    "unexpected_columns": [],
+    "duplicate_column_names": [],
+    "is_order_matching": true,
+    "actual_columns": [
+      "Test_ID",
+      "Applied_Voltage_kV",
+      "Load_Current_A",
+      "Ambient_Temperature_C",
+      "Test_Duration_min",
+      "Sensor_S1",
+      "Sensor_S2",
+      "Sensor_S3",
+      "Sensor_S4"
+    ],
+    "dtypes": {
+      "Test_ID": "str",
+      "Applied_Voltage_kV": "float64",
+      "Load_Current_A": "float64",
+      "Ambient_Temperature_C": "float64",
+      "Test_Duration_min": "float64",
+      "Sensor_S1": "float64",
+      "Sensor_S2": "float64",
+      "Sensor_S3": "float64",
+      "Sensor_S4": "float64"
+    }
+  },
+  "coercion_summary": {
+    "total_coercion_failures": 0,
+    "failed_columns": []
+  },
+  "missingness_stats": {
+    "Test_ID": {
+      "dtype": "str",
+      "row_count": 350,
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_count": 350
+    },
+    "Applied_Voltage_kV": {
+      "dtype": "float64",
+      "row_count": 350,
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_count": 345,
+      "min": 8.1451,
+      "max": 31.984,
+      "mean": 20.342829428571427,
+      "median": 20.531,
+      "std": 6.907111582345061
+    },
+    "Load_Current_A": {
+      "dtype": "float64",
+      "row_count": 350,
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_count": 345,
+      "min": 15.5381,
+      "max": 109.76,
+      "mean": 62.06129314285713,
+      "median": 63.0083,
+      "std": 27.41599655061396
+    },
+    "Ambient_Temperature_C": {
+      "dtype": "float64",
+      "row_count": 350,
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_count": 341,
+      "min": 18.0,
+      "max": 55.0,
+      "mean": 34.488182,
+      "median": 34.36295,
+      "std": 7.558971634196051
+    },
+    "Test_Duration_min": {
+      "dtype": "float64",
+      "row_count": 350,
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_count": 346,
+      "min": 5.5271,
+      "max": 59.9207,
+      "mean": 31.474716285714287,
+      "median": 32.1032,
+      "std": 15.304859383823706
+    },
+    "Sensor_S1": {
+      "dtype": "float64",
+      "row_count": 350,
+      "missing_count": 1,
+      "missing_percent": 0.2857,
+      "unique_count": 344,
+      "min": 0.2654,
+      "max": 26.8678,
+      "mean": 13.493851575931231,
+      "median": 13.4877,
+      "std": 3.9646964410662693
+    },
+    "Sensor_S2": {
+      "dtype": "float64",
+      "row_count": 350,
+      "missing_count": 3,
+      "missing_percent": 0.8571,
+      "unique_count": 342,
+      "min": -1.5509,
+      "max": 25.0,
+      "mean": 13.55078213256484,
+      "median": 13.5335,
+      "std": 3.592801376399462
+    },
+    "Sensor_S3": {
+      "dtype": "float64",
+      "row_count": 350,
+      "missing_count": 2,
+      "missing_percent": 0.5714,
+      "unique_count": 342,
+      "min": 0.0,
+      "max": 30.8454,
+      "mean": 16.887171839080462,
+      "median": 16.969549999999998,
+      "std": 4.970915994124785
+    },
+    "Sensor_S4": {
+      "dtype": "float64",
+      "row_count": 350,
+      "missing_count": 11,
+      "missing_percent": 3.1429,
+      "unique_count": 336,
+      "min": 12.9395,
+      "max": 81.9709,
+      "mean": 49.436665486725666,
+      "median": 49.9536,
+      "std": 11.205639657447614
+    }
+  },
+  "negatives_and_zeros": {
+    "Applied_Voltage_kV": {
+      "negative_count": 0,
+      "negative_percent": 0.0,
+      "zero_count": 0,
+      "zero_percent": 0.0
+    },
+    "Load_Current_A": {
+      "negative_count": 0,
+      "negative_percent": 0.0,
+      "zero_count": 0,
+      "zero_percent": 0.0
+    },
+    "Ambient_Temperature_C": {
+      "negative_count": 0,
+      "negative_percent": 0.0,
+      "zero_count": 0,
+      "zero_percent": 0.0
+    },
+    "Test_Duration_min": {
+      "negative_count": 0,
+      "negative_percent": 0.0,
+      "zero_count": 0,
+      "zero_percent": 0.0
+    },
+    "Sensor_S1": {
+      "negative_count": 0,
+      "negative_percent": 0.0,
+      "zero_count": 0,
+      "zero_percent": 0.0
+    },
+    "Sensor_S2": {
+      "negative_count": 1,
+      "negative_percent": 0.2857,
+      "zero_count": 0,
+      "zero_percent": 0.0
+    },
+    "Sensor_S3": {
+      "negative_count": 0,
+      "negative_percent": 0.0,
+      "zero_count": 1,
+      "zero_percent": 0.2857
+    },
+    "Sensor_S4": {
+      "negative_count": 0,
+      "negative_percent": 0.0,
+      "zero_count": 0,
+      "zero_percent": 0.0
+    }
+  },
+  "exact_duplicates": {
+    "total_duplicate_rows": 0,
+    "duplicate_groups_count": 0,
+    "duplicate_test_ids_count": 0
+  },
+  "distributions_and_iqr": {
+    "Applied_Voltage_kV": {
+      "min": 8.1451,
+      "max": 31.984,
+      "mean": 20.342829428571427,
+      "median": 20.531,
+      "std": 6.907111582345061,
+      "Q1": 14.506825,
+      "Q3": 25.995025000000002,
+      "IQR": 11.488200000000003,
+      "lower_iqr_bound": -2.725475000000003,
+      "upper_iqr_bound": 43.22732500000001,
+      "count_below_lower_bound": 0,
+      "count_above_upper_bound": 0
+    },
+    "Load_Current_A": {
+      "min": 15.5381,
+      "max": 109.76,
+      "mean": 62.06129314285713,
+      "median": 63.0083,
+      "std": 27.41599655061396,
+      "Q1": 39.0778,
+      "Q3": 84.95212500000001,
+      "IQR": 45.874325000000006,
+      "lower_iqr_bound": -29.73368750000001,
+      "upper_iqr_bound": 153.76361250000002,
+      "count_below_lower_bound": 0,
+      "count_above_upper_bound": 0
+    },
+    "Ambient_Temperature_C": {
+      "min": 18.0,
+      "max": 55.0,
+      "mean": 34.488182,
+      "median": 34.36295,
+      "std": 7.558971634196051,
+      "Q1": 29.252225,
+      "Q3": 39.3464,
+      "IQR": 10.094175000000003,
+      "lower_iqr_bound": 14.110962499999994,
+      "upper_iqr_bound": 54.487662500000006,
+      "count_below_lower_bound": 0,
+      "count_above_upper_bound": 3
+    },
+    "Test_Duration_min": {
+      "min": 5.5271,
+      "max": 59.9207,
+      "mean": 31.474716285714287,
+      "median": 32.1032,
+      "std": 15.304859383823706,
+      "Q1": 17.726924999999998,
+      "Q3": 44.14895,
+      "IQR": 26.422025,
+      "lower_iqr_bound": -21.906112500000003,
+      "upper_iqr_bound": 83.7819875,
+      "count_below_lower_bound": 0,
+      "count_above_upper_bound": 0
+    },
+    "Sensor_S1": {
+      "min": 0.2654,
+      "max": 26.8678,
+      "mean": 13.493851575931231,
+      "median": 13.4877,
+      "std": 3.9646964410662693,
+      "Q1": 10.1767,
+      "Q3": 16.4244,
+      "IQR": 6.247699999999998,
+      "lower_iqr_bound": 0.8051500000000029,
+      "upper_iqr_bound": 25.795949999999998,
+      "count_below_lower_bound": 2,
+      "count_above_upper_bound": 1
+    },
+    "Sensor_S2": {
+      "min": -1.5509,
+      "max": 25.0,
+      "mean": 13.55078213256484,
+      "median": 13.5335,
+      "std": 3.592801376399462,
+      "Q1": 11.056999999999999,
+      "Q3": 15.9064,
+      "IQR": 4.849400000000001,
+      "lower_iqr_bound": 3.782899999999997,
+      "upper_iqr_bound": 23.180500000000002,
+      "count_below_lower_bound": 2,
+      "count_above_upper_bound": 2
+    },
+    "Sensor_S3": {
+      "min": 0.0,
+      "max": 30.8454,
+      "mean": 16.887171839080462,
+      "median": 16.969549999999998,
+      "std": 4.970915994124785,
+      "Q1": 12.658975,
+      "Q3": 20.9837,
+      "IQR": 8.324724999999999,
+      "lower_iqr_bound": 0.1718875000000022,
+      "upper_iqr_bound": 33.4707875,
+      "count_below_lower_bound": 1,
+      "count_above_upper_bound": 0
+    },
+    "Sensor_S4": {
+      "min": 12.9395,
+      "max": 81.9709,
+      "mean": 49.436665486725666,
+      "median": 49.9536,
+      "std": 11.205639657447614,
+      "Q1": 41.5048,
+      "Q3": 56.2222,
+      "IQR": 14.717399999999998,
+      "lower_iqr_bound": 19.428700000000006,
+      "upper_iqr_bound": 78.2983,
+      "count_below_lower_bound": 2,
+      "count_above_upper_bound": 2
+    }
+  },
+  "test_id_overlap_with_train_count": 0,
+  "test_id_overlap_list": []
+}

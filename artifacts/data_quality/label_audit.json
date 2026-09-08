@@ -1,0 +1,25 @@
+{
+  "validity_label_audit": {
+    "unique_labels": [
+      "Valid",
+      "Invalid"
+    ],
+    "counts": {
+      "Valid": 866,
+      "Invalid": 134
+    },
+    "missing_count": 0,
+    "missing_percent": 0.0
+  },
+  "reference_parameter_audit": {
+    "missing_count": 0,
+    "missing_percent": 0.0,
+    "min": 11.9183,
+    "max": 61.5848,
+    "mean": 26.692486100000004,
+    "median": 23.018250000000002,
+    "std": 10.694772214993051,
+    "q25": 18.415550000000003,
+    "q75": 33.44365
+  }
+}
