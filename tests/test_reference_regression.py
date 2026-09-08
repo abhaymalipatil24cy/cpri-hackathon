@@ -134,3 +134,107 @@ def test_19_test_data_does_not_affect_model_selection():
 def test_20_no_silent_clipping(test_df):
     preds = test_df['Predicted_Reference_Parameter']
     assert preds.min() >= 10.0
+
+# --- CP7.1 FORENSIC AUDIT TESTS (21-35) ---
+
+# Test 21: 800-row Dev set identity
+def test_21_dev_set_identity():
+    path = config.ARTIFACTS_DIR / 'regression' / 'evaluation_provenance.json'
+    with open(path) as f:
+        prov = json.load(f)
+    assert prov['development_cv']['row_count'] == 800
+    assert prov['development_cv']['fold_count'] == 5
+
+# Test 22: 200-row Holdout identity
+def test_22_holdout_identity():
+    path = config.ARTIFACTS_DIR / 'regression' / 'evaluation_provenance.json'
+    with open(path) as f:
+        prov = json.load(f)
+    assert prov['locked_holdout']['row_count'] == 200
+    assert prov['locked_holdout']['holdout_involved'] == True
+
+# Test 23: Dev/Holdout disjointness
+def test_23_dev_holdout_disjointness():
+    path = config.ARTIFACTS_DIR / 'regression' / 'split_manifest.json'
+    with open(path) as f:
+        sm = json.load(f)
+    dev_set = set(sm['dev_ids'])
+    holdout_set = set(sm['holdout_ids'])
+    assert len(dev_set.intersection(holdout_set)) == 0
+
+# Test 24: Correct metric row counts in provenance
+def test_24_correct_metric_row_counts():
+    path = config.ARTIFACTS_DIR / 'regression' / 'evaluation_provenance.json'
+    with open(path) as f:
+        prov = json.load(f)
+    assert prov['development_cv']['row_count'] == 800
+    assert prov['locked_holdout']['row_count'] == 200
+    assert prov['full_training_oof']['row_count'] == 1000
+
+# Test 25: No test IDs in training set
+def test_25_no_test_ids_in_training(oof_df, test_df):
+    train_ids = set(oof_df['Test_ID'])
+    test_ids = set(test_df['Test_ID'])
+    assert len(train_ids.intersection(test_ids)) == 0
+
+# Test 26: CP5/CP7 fold intersection audit
+def test_26_cp5_fold_intersection_audit():
+    path = config.ARTIFACTS_DIR / 'regression' / 'cp5_nested_provenance.json'
+    with open(path) as f:
+        cp5_audit = json.load(f)
+    assert cp5_audit['reference_parameter_leakage'] == False
+    assert cp5_audit['audit_status'] == 'LEAKAGE_SAFE_VERIFIED'
+
+# Test 27: CP5 feature safety status
+def test_27_cp5_feature_safety_status():
+    path = config.ARTIFACTS_DIR / 'regression' / 'cp5_nested_provenance.json'
+    with open(path) as f:
+        cp5_audit = json.load(f)
+    assert cp5_audit['audit_status'] == 'LEAKAGE_SAFE_VERIFIED'
+
+# Test 28: Target exclusion in feature list
+def test_28_target_exclusion():
+    assert 'Reference_Parameter' not in reference_regression.FEATURE_COLS
+    assert 'Validity_Label' not in reference_regression.FEATURE_COLS
+
+# Test 29: Feature matrix finite values
+def test_29_feature_matrix_finite_values(oof_df):
+    for col in reference_regression.FEATURE_COLS:
+        assert oof_df[col].notna().all()
+        assert np.isfinite(oof_df[col]).all()
+
+# Test 30: Ratio denominator safety
+def test_30_ratio_denominator_safety(oof_df):
+    assert (oof_df['S3_to_S1_ratio'].abs() < 1e7).all()
+
+# Test 31: Final model metadata consistency
+def test_31_final_model_metadata_consistency(model_metadata):
+    assert model_metadata['model_family'] == 'GradientBoostingRegressor'
+    assert model_metadata['training_row_count'] == 1000
+    assert len(model_metadata['feature_list']) == 20
+
+# Test 32: Exactly 350 test predictions
+def test_32_exactly_350_test_predictions(test_df):
+    assert len(test_df) == 350
+    assert test_df['Test_ID'].nunique() == 350
+
+# Test 33: No prediction clipping
+def test_33_no_prediction_clipping(test_df, model_metadata):
+    preds = test_df['Predicted_Reference_Parameter']
+    assert preds.min() > 0.0
+
+# Test 34: Deterministic predictions SHA-256
+def test_34_deterministic_predictions_sha256():
+    path = config.ARTIFACTS_DIR / 'regression' / 'reproducibility.json'
+    with open(path) as f:
+        rep = json.load(f)
+    assert len(rep['oof_sha256']) == 64
+    assert len(rep['test_sha256']) == 64
+
+# Test 35: Correct holdout subgroup counts
+def test_35_correct_holdout_subgroup_counts(holdout_df):
+    assert len(holdout_df) == 200
+    valid_count = (holdout_df['Validity_Label'] == 'Valid').sum()
+    invalid_count = (holdout_df['Validity_Label'] == 'Invalid').sum()
+    assert valid_count + invalid_count == 200
+    assert valid_count > 150

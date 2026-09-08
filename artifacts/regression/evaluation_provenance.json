@@ -1,0 +1,35 @@
+{
+  "development_cv": {
+    "experiment_name": "Development Set 5-Fold Cross-Validation",
+    "row_count": 800,
+    "test_id_set_hash": "a28f29299c6ca9da506dbe13f15cf8426ca47043cad89003569291ef374141db",
+    "split_type": "Stratified 80/20 train_test_split dev subset",
+    "fold_count": 5,
+    "fold_seed": 42,
+    "holdout_involved": false,
+    "test_data_involved": false,
+    "purpose": "Model comparison, feature ablation (R0-R4), validity-aware experiments (V1-V4), and hyperparameter selection"
+  },
+  "locked_holdout": {
+    "experiment_name": "Locked 20% Holdout Evaluation",
+    "row_count": 200,
+    "test_id_set_hash": "7830563f8a7c36ee2279eb7ab0ef38a42dccb85c92b5979aa47e62610186aaba",
+    "split_type": "Stratified 80/20 holdout subset",
+    "fold_count": 1,
+    "fold_seed": 42,
+    "holdout_involved": true,
+    "test_data_involved": false,
+    "purpose": "Final untouched generalization assessment after model & hyperparameter freezing"
+  },
+  "full_training_oof": {
+    "experiment_name": "Full Training 1000-Row Out-of-Fold Evaluation",
+    "row_count": 1000,
+    "test_id_set_hash": "78a1a7a1c98f69f99fa064e8a7095dbfff06f5591738f5ecc3860b552b3c83de",
+    "split_type": "5-Fold KFold CV on 100% training data",
+    "fold_count": 5,
+    "fold_seed": 42,
+    "holdout_involved": false,
+    "test_data_involved": false,
+    "purpose": "Full training error analysis, regime performance breakdown, and training final model for test predictions"
+  }
+}
