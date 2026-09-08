@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-09-08T23:31:04.618437",
+  "checkpoint": "CP9",
+  "overall_status": "PASS",
+  "checks": {
+    "submission_file_exists": true,
+    "submission_exact_350_rows": true,
+    "submission_exact_schema": true,
+    "submission_exact_id_order": true,
+    "submission_zero_nan": true,
+    "submission_finite_regression_values": true,
+    "submission_valid_classification_labels": true,
+    "no_training_id_leakage": true,
+    "model_freeze_verified": true,
+    "cp6_threshold_verified": 0.236,
+    "random_seed_verified": 42,
+    "test_suite_passed": true
+  },
+  "file_paths": {
+    "submission": "C:\\Users\\ROG\\cpri-hackathon\\outputs\\TeamName.csv",
+    "test_audit": "C:\\Users\\ROG\\cpri-hackathon\\artifacts\\final\\final_test_audit.csv",
+    "freeze_manifest": "C:\\Users\\ROG\\cpri-hackathon\\artifacts\\final\\cp9_freeze_manifest.json",
+    "executive_summary": "C:\\Users\\ROG\\cpri-hackathon\\artifacts\\final\\executive_summary.md"
+  }
+}
