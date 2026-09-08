@@ -1,0 +1,236 @@
+{
+  "models_compared": {
+    "Model A (Global Ridge)": {
+      "OOF_MAE": 0.4691,
+      "OOF_RMSE": 1.6294,
+      "OOF_R2": 0.8998,
+      "residual_std": 1.6302
+    },
+    "Model B (Regime-aware Ridge)": {
+      "OOF_MAE": 0.523,
+      "OOF_RMSE": 1.6567,
+      "OOF_R2": 0.8964,
+      "residual_std": 1.6576
+    },
+    "Model C (Simple S1+S2)": {
+      "OOF_MAE": 1.3864,
+      "OOF_RMSE": 2.4517,
+      "OOF_R2": 0.7731,
+      "residual_std": 2.4529
+    },
+    "Model D (Global + OneHot Regime)": {
+      "OOF_MAE": 0.4791,
+      "OOF_RMSE": 1.6396,
+      "OOF_R2": 0.8985,
+      "residual_std": 1.6404
+    }
+  },
+  "selected_model": {
+    "name": "Model A (Global Ridge)",
+    "justification": "Model A achieves lowest OOF MAE (0.4691), lowest RMSE (1.6294), and highest R2 (0.8998), outperforming simple baseline Model C (MAE=1.3864) and regime-aware Model B (MAE=0.5230)."
+  },
+  "regime_value": {
+    "improved_prediction": false,
+    "quantification": "Regime conditioning (Model B) yielded OOF MAE=0.5230 and RMSE=1.6567 compared to Global Model A OOF MAE=0.4691 and RMSE=1.6294. Operating variables enter smoothly into the linear predictor, making global regularized regression superior without sub-sampling noise across regimes."
+  },
+  "posthoc_analysis": {
+    "validity_separation": {
+      "Valid": {
+        "count": 866,
+        "mean_abs_residual": 0.2526,
+        "std_abs_residual": 0.1934,
+        "median_abs_residual": 0.2085,
+        "iqr_abs_residual": 0.2549,
+        "mean_z": 0.0179,
+        "std_z": 0.1966
+      },
+      "Invalid": {
+        "count": 134,
+        "mean_abs_residual": 1.8681,
+        "std_abs_residual": 3.9734,
+        "median_abs_residual": 0.2341,
+        "iqr_abs_residual": 0.4454,
+        "mean_z": -0.1356,
+        "std_z": 2.7908
+      },
+      "effect_size_cohen_d": 1.1053,
+      "mann_whitney_u_pvalue": 0.1734059486378855
+    },
+    "regime_performance": {
+      "Regime_0": {
+        "count": 250,
+        "mae": 0.5013,
+        "rmse": 1.6021,
+        "std_residual": 1.6003,
+        "valid_count": 223,
+        "invalid_count": 27
+      },
+      "Regime_1": {
+        "count": 226,
+        "mae": 0.3847,
+        "rmse": 1.1831,
+        "std_residual": 1.1856,
+        "valid_count": 198,
+        "invalid_count": 28
+      },
+      "Regime_2": {
+        "count": 252,
+        "mae": 0.3344,
+        "rmse": 0.9255,
+        "std_residual": 0.9265,
+        "valid_count": 213,
+        "invalid_count": 39
+      },
+      "Regime_3": {
+        "count": 272,
+        "mae": 0.6345,
+        "rmse": 2.3336,
+        "std_residual": 2.3371,
+        "valid_count": 232,
+        "invalid_count": 40
+      }
+    },
+    "imputation_sensitivity": {
+      "Observed_S3": {
+        "count": 993,
+        "mae": 0.4722,
+        "rmse": 1.6352,
+        "std_residual": 1.636
+      },
+      "Imputed_S3": {
+        "count": 7,
+        "mae": 0.0371,
+        "rmse": 0.0441,
+        "std_residual": 0.0369
+      }
+    },
+    "rule_comparison": {
+      "S3_lt_S1_minus_5_count": 11,
+      "S3_lt_S1_minus_5_invalid_count": 11,
+      "neg_S2_count": 1,
+      "neg_S2_invalid_count": 1,
+      "sentinel_value_count": 6,
+      "sentinel_value_invalid_count": 6,
+      "large_residual_gt_2_count": 21,
+      "large_residual_gt_2_invalid_count": 21,
+      "suspicious_by_residual_missed_by_hard_rules": 11,
+      "suspicious_by_hard_rules_missed_by_residual": 3
+    },
+    "s4_handling": {
+      "correlation_s4_s3": -0.0677,
+      "s4_missing_count": 29,
+      "s4_missing_valid_count": 29,
+      "s4_missing_invalid_count": 0,
+      "mean_abs_residual_when_s4_missing": 0.202,
+      "mean_abs_residual_when_s4_present": 0.4771,
+      "useful_as_predictor": false,
+      "conclusion": "Sensor_S4 shows weak correlation with S3 (-0.0677) and contains missing values. Retained as audit feature rather than forcing into consistency model."
+    },
+    "golden_forensic_cases": {
+      "Case_A_Negative_S2": {
+        "Test_ID": "TRN-0203",
+        "raw_sensor_values": {
+          "S1": 8.5219,
+          "S2": -0.2015,
+          "S3": 11.2283,
+          "S4": 67.3265
+        },
+        "cleaned_sensor_values": {
+          "S1": 8.5219,
+          "S2": -0.2015,
+          "S3": 11.2283,
+          "S4": 67.3265
+        },
+        "imputation_flags": {
+          "S1_imputed": 0,
+          "S2_imputed": 0,
+          "S3_imputed": 0,
+          "S4_imputed": 0
+        },
+        "predicted_S3": 10.3911,
+        "residual": 0.8372,
+        "standardized_residual": 0.5204,
+        "regime_id": 2,
+        "Validity_Label": "Invalid"
+      },
+      "Case_B_S3_lt_S1_minus_5": {
+        "Test_ID": "TRN-0874",
+        "raw_sensor_values": {
+          "S1": 14.0088,
+          "S2": 13.5919,
+          "S3": 1.0,
+          "S4": 63.0673
+        },
+        "cleaned_sensor_values": {
+          "S1": 14.0088,
+          "S2": 13.5919,
+          "S3": 1.0,
+          "S4": 63.0673
+        },
+        "imputation_flags": {
+          "S1_imputed": 0,
+          "S2_imputed": 0,
+          "S3_imputed": 0,
+          "S4_imputed": 0
+        },
+        "predicted_S3": 17.8797,
+        "residual": -16.8797,
+        "standardized_residual": -10.4918,
+        "regime_id": 3,
+        "Validity_Label": "Invalid"
+      },
+      "Case_C_Normal": {
+        "Test_ID": "TRN-0889",
+        "raw_sensor_values": {
+          "S1": 13.6343,
+          "S2": 15.1361,
+          "S3": 16.5062,
+          "S4": 62.9115
+        },
+        "cleaned_sensor_values": {
+          "S1": 13.6343,
+          "S2": 15.1361,
+          "S3": 16.5062,
+          "S4": 62.9115
+        },
+        "imputation_flags": {
+          "S1_imputed": 0,
+          "S2_imputed": 0,
+          "S3_imputed": 0,
+          "S4_imputed": 0
+        },
+        "predicted_S3": 16.0787,
+        "residual": 0.4275,
+        "standardized_residual": 0.2657,
+        "regime_id": 0,
+        "Validity_Label": "Valid"
+      },
+      "Case_D_S3_Imputed": {
+        "Test_ID": "TRN-0533",
+        "raw_sensor_values": {
+          "S1": 12.6016,
+          "S2": 13.0752,
+          "S3": null,
+          "S4": 56.541
+        },
+        "cleaned_sensor_values": {
+          "S1": 12.6016,
+          "S2": 13.0752,
+          "S3": 15.8029,
+          "S4": 56.541
+        },
+        "imputation_flags": {
+          "S1_imputed": 0,
+          "S2_imputed": 0,
+          "S3_imputed": 1,
+          "S4_imputed": 0
+        },
+        "predicted_S3": 15.8615,
+        "residual": -0.0586,
+        "standardized_residual": -0.0393,
+        "regime_id": 1,
+        "Validity_Label": "Invalid"
+      }
+    }
+  }
+}

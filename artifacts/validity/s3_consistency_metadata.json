@@ -1,0 +1,14 @@
+{
+  "checkpoint": "CP5",
+  "random_state": 42,
+  "selected_model": "Model A (Global Ridge)",
+  "oof_row_count": 1000,
+  "test_row_count": 350,
+  "reproducibility_status": "verified",
+  "file_hashes": {
+    "s3_consistency_oof.csv": "3c72851262cf62cd60a53f3fae1b719a60ae8c2dfb0c081a725bfb8ee5c5a9ce",
+    "s3_consistency_test.csv": "bca1bcce3a55574722e1191141074d24e3fe5f64540cfb0bc40b8011f6258b35",
+    "s3_consistency_model.pkl": "063722f9687384107a1cc94d5eec2e84a33889986f1e21495108740a9012b7b0",
+    "s3_consistency_metrics.json": "efb8479d5a5fece5ff1a9cc710ee34dcd769025450dd031322c63e68850cd537"
+  }
+}
