@@ -1,0 +1,74 @@
+{
+  "A_raw_operating_sensor": {
+    "Accuracy": 0.959,
+    "Balanced_Accuracy": 0.8754007100754886,
+    "Invalid_Precision": 0.918918918918919,
+    "Invalid_Recall": 0.7611940298507462,
+    "Invalid_F1": 0.8326530612244898,
+    "ROC_AUC": 0.9643885078073834,
+    "PR_AUC": 0.8754760354050226
+  },
+  "B_A_plus_cp3_rules": {
+    "Accuracy": 0.954,
+    "Balanced_Accuracy": 0.8725138740477749,
+    "Invalid_Precision": 0.8793103448275862,
+    "Invalid_Recall": 0.7611940298507462,
+    "Invalid_F1": 0.816,
+    "ROC_AUC": 0.9671503912309125,
+    "PR_AUC": 0.8782449634611427
+  },
+  "C_A_plus_consistency": {
+    "Accuracy": 0.945,
+    "Balanced_Accuracy": 0.8767794974320086,
+    "Invalid_Precision": 0.8015267175572519,
+    "Invalid_Recall": 0.7835820895522388,
+    "Invalid_F1": 0.7924528301886793,
+    "ROC_AUC": 0.950531694874358,
+    "PR_AUC": 0.8432494282823669
+  },
+  "E_full_hybrid_model": {
+    "Accuracy": 0.981,
+    "Balanced_Accuracy": 0.9764141187825308,
+    "Invalid_Precision": 0.896551724137931,
+    "Invalid_Recall": 0.9701492537313433,
+    "Invalid_F1": 0.931899641577061,
+    "ROC_AUC": 0.9844498638447485,
+    "PR_AUC": 0.9677297489120027
+  },
+  "Full_minus_residual": {
+    "Accuracy": 0.986,
+    "Balanced_Accuracy": 0.9793009548102445,
+    "Invalid_Precision": 0.9285714285714286,
+    "Invalid_Recall": 0.9701492537313433,
+    "Invalid_F1": 0.948905109489051,
+    "ROC_AUC": 0.9785770914480715,
+    "PR_AUC": 0.9702956451352127
+  },
+  "Full_minus_S4": {
+    "Accuracy": 0.984,
+    "Balanced_Accuracy": 0.9781462203991589,
+    "Invalid_Precision": 0.9154929577464789,
+    "Invalid_Recall": 0.9701492537313433,
+    "Invalid_F1": 0.9420289855072463,
+    "ROC_AUC": 0.9883320119954501,
+    "PR_AUC": 0.9671954565102707
+  },
+  "Full_minus_duration": {
+    "Accuracy": 0.983,
+    "Balanced_Accuracy": 0.9744148771155768,
+    "Invalid_Precision": 0.9148936170212766,
+    "Invalid_Recall": 0.9626865671641791,
+    "Invalid_F1": 0.9381818181818182,
+    "ROC_AUC": 0.9822610389162731,
+    "PR_AUC": 0.9650513198038582
+  },
+  "Full_minus_power_proxy": {
+    "Accuracy": 0.981,
+    "Balanced_Accuracy": 0.9732601427044913,
+    "Invalid_Precision": 0.9020979020979021,
+    "Invalid_Recall": 0.9626865671641791,
+    "Invalid_F1": 0.9314079422382672,
+    "ROC_AUC": 0.9879442280514288,
+    "PR_AUC": 0.9678231136206374
+  }
+}

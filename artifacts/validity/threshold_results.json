@@ -1,0 +1,36 @@
+{
+  "selected_fold_thresholds": [
+    0.28,
+    0.28,
+    0.23,
+    0.32,
+    0.29000000000000004
+  ],
+  "mean_threshold": 0.28,
+  "strategies_evaluated": {
+    "default_0_5": {
+      "Accuracy": 0.97375,
+      "Balanced_Accuracy": 0.9097719518280265,
+      "Invalid_Precision": 0.9777777777777777,
+      "Invalid_Recall": 0.822429906542056,
+      "Invalid_F1": 0.8934010152284264,
+      "ROC_AUC": 0.957020134590228,
+      "PR_AUC": 0.929061477922517
+    },
+    "fold_local_f1_optimal": {
+      "Accuracy": 0.981,
+      "Balanced_Accuracy": 0.9732601427044913,
+      "Invalid_Precision": 0.9020979020979021,
+      "Invalid_Recall": 0.9626865671641791,
+      "Invalid_F1": 0.9314079422382672,
+      "ROC_AUC": 0.9844498638447485,
+      "PR_AUC": 0.9677297489120027,
+      "confusion_matrix": {
+        "tp": 129,
+        "fp": 14,
+        "fn": 5,
+        "tn": 852
+      }
+    }
+  }
+}

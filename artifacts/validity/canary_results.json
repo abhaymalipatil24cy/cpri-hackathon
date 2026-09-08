@@ -1,0 +1,71 @@
+{
+  "Canary_1_Negative_S1": {
+    "invalid_probability": 0.12,
+    "predicted_validity": "Valid",
+    "updates_applied": {
+      "Sensor_S1": -1.0,
+      "S1_clean": -1.0,
+      "flag_negative_sensor": 1
+    }
+  },
+  "Canary_2_Extreme_S3_Inconsistent": {
+    "invalid_probability": 0.66,
+    "predicted_validity": "Invalid",
+    "updates_applied": {
+      "Sensor_S3": 1.0,
+      "S3_clean": 1.0,
+      "S3_consistency_residual": -15.0,
+      "S3_abs_residual": 15.0,
+      "S3_consistency_z": -8.0,
+      "flag_s3_s1_inconsistency": 1
+    }
+  },
+  "Canary_3_All_S1_S3_Missing": {
+    "invalid_probability": 0.43,
+    "predicted_validity": "Invalid",
+    "updates_applied": {
+      "Sensor_S1_missing": 1,
+      "Sensor_S2_missing": 1,
+      "Sensor_S3_missing": 1,
+      "missing_count": 3
+    }
+  },
+  "Canary_4_Missing_S4_Only": {
+    "invalid_probability": 0.0,
+    "predicted_validity": "Valid",
+    "updates_applied": {
+      "Sensor_S4_missing": 1,
+      "missing_count": 1
+    }
+  },
+  "Canary_5_Sentinel_Value_25": {
+    "invalid_probability": 0.41,
+    "predicted_validity": "Invalid",
+    "updates_applied": {
+      "Sensor_S1": 25.0,
+      "S1_clean": 25.0,
+      "sentinel_count": 1,
+      "flag_sentinel": 1
+    }
+  },
+  "Canary_6_Strongly_Inconsistent_S3": {
+    "invalid_probability": 0.53,
+    "predicted_validity": "Invalid",
+    "updates_applied": {
+      "S3_consistency_residual": -12.0,
+      "S3_abs_residual": 12.0,
+      "S3_consistency_z": -6.0
+    }
+  },
+  "Canary_7_Legitimate_Extreme_Consistent": {
+    "invalid_probability": 0.1,
+    "predicted_validity": "Valid",
+    "updates_applied": {
+      "Applied_Voltage_kV": 35.0,
+      "Load_Current_A": 150.0,
+      "S3_consistency_residual": 0.1,
+      "S3_abs_residual": 0.1,
+      "S3_consistency_z": 0.05
+    }
+  }
+}

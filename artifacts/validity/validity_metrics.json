@@ -1,0 +1,84 @@
+{
+  "selected_model": "Random Forest",
+  "candidate_models": {
+    "Majority Baseline": {
+      "Accuracy": 0.86625,
+      "Balanced_Accuracy": 0.5,
+      "Invalid_Precision": 0.0,
+      "Invalid_Recall": 0.0,
+      "Invalid_F1": 0.0,
+      "ROC_AUC": 0.5,
+      "PR_AUC": 0.0
+    },
+    "CP3 Simple-Rule Baseline": {
+      "Accuracy": 0.885,
+      "Balanced_Accuracy": 0.5700934579439252,
+      "Invalid_Precision": 1.0,
+      "Invalid_Recall": 0.14018691588785046,
+      "Invalid_F1": 0.2459016393442623,
+      "ROC_AUC": 0.5700934579439252,
+      "PR_AUC": 0.2551869158878505
+    },
+    "Logistic Regression": {
+      "Accuracy": 0.915,
+      "Balanced_Accuracy": 0.6822429906542056,
+      "Invalid_Precision": 1.0,
+      "Invalid_Recall": 0.3644859813084112,
+      "Invalid_F1": 0.5342465753424658,
+      "ROC_AUC": 0.6789658939191651,
+      "PR_AUC": 0.6169263001177973
+    },
+    "Random Forest": {
+      "Accuracy": 0.97375,
+      "Balanced_Accuracy": 0.9097719518280265,
+      "Invalid_Precision": 0.9777777777777777,
+      "Invalid_Recall": 0.822429906542056,
+      "Invalid_F1": 0.8934010152284264,
+      "ROC_AUC": 0.957020134590228,
+      "PR_AUC": 0.929061477922517
+    },
+    "HistGradientBoosting": {
+      "Accuracy": 0.97375,
+      "Balanced_Accuracy": 0.9097719518280265,
+      "Invalid_Precision": 0.9777777777777777,
+      "Invalid_Recall": 0.822429906542056,
+      "Invalid_F1": 0.8934010152284264,
+      "ROC_AUC": 0.9290636673814245,
+      "PR_AUC": 0.9045300471147213
+    },
+    "IsolationForest (Unsupervised)": {
+      "Accuracy": 0.91625,
+      "Balanced_Accuracy": 0.8449717468409057,
+      "Invalid_Precision": 0.6666666666666666,
+      "Invalid_Recall": 0.7476635514018691,
+      "Invalid_F1": 0.7048458149779736,
+      "ROC_AUC": 0.8792194306212997,
+      "PR_AUC": 0.7070246526023879
+    }
+  },
+  "oof_performance": {
+    "Accuracy": 0.981,
+    "Balanced_Accuracy": 0.9732601427044913,
+    "Invalid_Precision": 0.9020979020979021,
+    "Invalid_Recall": 0.9626865671641791,
+    "Invalid_F1": 0.9314079422382672,
+    "ROC_AUC": 0.9844498638447485,
+    "PR_AUC": 0.9677297489120027,
+    "confusion_matrix": {
+      "tp": 129,
+      "fp": 14,
+      "fn": 5,
+      "tn": 852
+    }
+  },
+  "locked_holdout": {
+    "threshold_used": 0.28,
+    "Accuracy": 0.97,
+    "Balanced_Accuracy": 0.9357739242132306,
+    "Invalid_Precision": 0.8888888888888888,
+    "Invalid_Recall": 0.8888888888888888,
+    "Invalid_F1": 0.8888888888888888,
+    "ROC_AUC": 0.9488332262898737,
+    "PR_AUC": 0.9170655659817502
+  }
+}
