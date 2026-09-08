@@ -1,0 +1,102 @@
+{
+  "Applied_Voltage_kV": {
+    "source": "raw",
+    "learned": false,
+    "oof_safe": true
+  },
+  "Load_Current_A": {
+    "source": "raw",
+    "learned": false,
+    "oof_safe": true
+  },
+  "Ambient_Temperature_C": {
+    "source": "raw",
+    "learned": false,
+    "oof_safe": true
+  },
+  "Test_Duration_min": {
+    "source": "raw",
+    "learned": false,
+    "oof_safe": true
+  },
+  "S1_clean": {
+    "source": "derived",
+    "learned": false,
+    "oof_safe": true
+  },
+  "S2_clean": {
+    "source": "derived",
+    "learned": false,
+    "oof_safe": true
+  },
+  "S3_clean": {
+    "source": "derived",
+    "learned": false,
+    "oof_safe": true
+  },
+  "S4_clean": {
+    "source": "derived",
+    "learned": false,
+    "oof_safe": true
+  },
+  "Sensor_S1_missing": {
+    "source": "raw",
+    "learned": false,
+    "oof_safe": true
+  },
+  "Sensor_S2_missing": {
+    "source": "raw",
+    "learned": false,
+    "oof_safe": true
+  },
+  "Sensor_S3_missing": {
+    "source": "raw",
+    "learned": false,
+    "oof_safe": true
+  },
+  "Sensor_S4_missing": {
+    "source": "raw",
+    "learned": false,
+    "oof_safe": true
+  },
+  "power_proxy": {
+    "source": "derived",
+    "learned": false,
+    "oof_safe": true
+  },
+  "S3_minus_S1": {
+    "source": "derived",
+    "learned": false,
+    "oof_safe": true
+  },
+  "S3_minus_S2": {
+    "source": "derived",
+    "learned": false,
+    "oof_safe": true
+  },
+  "S2_minus_S1": {
+    "source": "derived",
+    "learned": false,
+    "oof_safe": true
+  },
+  "S3_to_S1_ratio": {
+    "source": "derived",
+    "learned": false,
+    "oof_safe": true
+  },
+  "S3_consistency_residual": {
+    "source": "derived",
+    "learned": false,
+    "oof_safe": true
+  },
+  "S3_abs_residual": {
+    "source": "derived",
+    "learned": false,
+    "oof_safe": true
+  },
+  "S3_consistency_z": {
+    "source": "derived",
+    "learned": false,
+    "oof_safe": true
+  }
+}

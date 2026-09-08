@@ -1,0 +1,7 @@
+{
+  "python_version": "3.14",
+  "random_seed": 42,
+  "oof_sha256": "c94058af2def25131fbd33b29f03ba191ff32548a10ccdc69c6578c3c22993ba",
+  "holdout_sha256": "97795057608756860e61a0a106c0e7ba673fc01a6239fc403c3b04677a543d7c",
+  "test_sha256": "df7b87f862f7cacb81d537f88b8ac33f640ad49ac1a6c88eee10d14e00e49fa1"
+}

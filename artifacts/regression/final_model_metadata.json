@@ -1,0 +1,36 @@
+{
+  "model_family": "GradientBoostingRegressor",
+  "hyperparameters": {
+    "n_estimators": 100,
+    "random_state": 42
+  },
+  "feature_list": [
+    "Applied_Voltage_kV",
+    "Load_Current_A",
+    "Ambient_Temperature_C",
+    "Test_Duration_min",
+    "S1_clean",
+    "S2_clean",
+    "S3_clean",
+    "S4_clean",
+    "Sensor_S1_missing",
+    "Sensor_S2_missing",
+    "Sensor_S3_missing",
+    "Sensor_S4_missing",
+    "power_proxy",
+    "S3_minus_S1",
+    "S3_minus_S2",
+    "S2_minus_S1",
+    "S3_to_S1_ratio",
+    "S3_consistency_residual",
+    "S3_abs_residual",
+    "S3_consistency_z"
+  ],
+  "preprocessing": "fold-local median imputation & derived physical features",
+  "training_row_count": 1000,
+  "random_seed": 42,
+  "target_name": "Reference_Parameter",
+  "validity_handling": "V1 - All usable training observations",
+  "regime_handling": "Unpartitioned global model with continuous operating features",
+  "cp5_feature_provenance": "Fold-local out-of-fold S3 consistency residual from Ridge(alpha=1.0)"
+}
