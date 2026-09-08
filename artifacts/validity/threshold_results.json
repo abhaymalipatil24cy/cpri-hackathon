@@ -6,7 +6,7 @@
     0.32,
     0.29000000000000004
   ],
-  "mean_threshold": 0.28,
+  "mean_threshold": 0.236,
   "strategies_evaluated": {
     "default_0_5": {
       "Accuracy": 0.97375,

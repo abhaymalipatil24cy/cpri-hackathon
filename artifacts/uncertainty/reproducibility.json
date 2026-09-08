@@ -1,9 +1,9 @@
 {
-  "frozen_model_manifest_sha256": "28ff7dbe2c33e5bca17b1b796de30e599e23e587924f33db5842cb6bf372c40f",
-  "attention_breakdown_sha256": "b2217260c5de9498f24a663660e63ec3bcf9ade4a560ce903fb24926cbf25d40",
+  "frozen_model_manifest_sha256": "850152a16478023686444db7bf4ff981e8e242714d1c5a89dcfdb0384fde1983",
+  "attention_breakdown_sha256": "0a0805223e7056b68f0da891450647711ee2e554934c82d008182fdecbbd04b3",
   "attention_provenance_sha256": "321bd3f5a57b125fba225b9ca25b032268e3dd1560d54123b4bc77d057ae9fe8",
-  "test_attention_ranked_sha256": "e80ba454107e2d3a16ab5df8cb417660bd95f32072103cabad5b1350e94542e4",
-  "uncertainty_metrics_sha256": "be88014a1ca02bc76f963a2790c28ecddf86b27dfab0f29a1be16b7f8907ac75",
+  "test_attention_ranked_sha256": "8ced22c59fb09b8b844b576d1a76aab21fc53c691bebc78bbc17560f64dcce8b",
+  "uncertainty_metrics_sha256": "0bf684c15409c43a37f4ac6cbba84e3f8341999a704f8e7c1a39d1eeeab79104",
   "disagreement_analysis_sha256": "9a68a3577c02fb5c00165e2ac91696a1f23db3bd5030c845f5225105bd792ab2",
   "support_analysis_sha256": "bf42363d427675ff0f1cd8f951c7f6c19117424fdfb290e5c3fed69f1882345c",
   "canary_results_sha256": "d32852d466a5002268039e4f9063b3c68a6b96bd953f4156f6d803fecc4b2f8c",

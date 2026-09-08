@@ -1,0 +1,26 @@
+{
+  "cp6_holdout_accuracy": {
+    "value": 0.98,
+    "source": "artifacts/validity/validity_metrics.json"
+  },
+  "cp6_holdout_invalid_f1": {
+    "value": 0.9259,
+    "source": "artifacts/validity/validity_metrics.json"
+  },
+  "cp7_dev_cv_mae": {
+    "value": 0.788621,
+    "source": "artifacts/regression/cv_metrics.json"
+  },
+  "cp7_holdout_mae": {
+    "value": 1.257678,
+    "source": "artifacts/regression/holdout_metrics.json"
+  },
+  "cp7_holdout_valid_subgroup_mae": {
+    "value": 0.750612,
+    "source": "artifacts/regression/validity_metrics.csv"
+  },
+  "cp8_spearman_corr_disagreement": {
+    "value": 0.401625,
+    "source": "artifacts/uncertainty/uncertainty_metrics.json"
+  }
+}

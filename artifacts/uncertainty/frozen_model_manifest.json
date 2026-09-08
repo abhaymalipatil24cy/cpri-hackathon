@@ -3,7 +3,7 @@
   "policy": "Immutable frozen model manifest for CP6 validity and CP7 regression models",
   "cp6_validity_model": {
     "path": "C:\\Users\\ROG\\cpri-hackathon\\artifacts\\validity\\validity_model.pkl",
-    "sha256": "ea4c705fa0869a0df295b4662bebd3ddb552e196ea5832db0ba0126d8a942ec6",
+    "sha256": "e0aa655a3b19d587a1fa0901ee7a600a6eba3e13171e65fadc60401703f569b1",
     "model_family": "Random Forest",
     "decision_threshold": 0.236,
     "features": [
@@ -77,7 +77,7 @@
   },
   "cp5_consistency_model": {
     "path": "C:\\Users\\ROG\\cpri-hackathon\\artifacts\\validity\\s3_consistency_model.pkl",
-    "sha256": "6b6993ae4fc0e1f73b59be43338bb44d9ac89b280be7afd0858ff55e1bb0ec1d",
+    "sha256": "81fa9d13bbd3eb23b9d714b8d127b51448cf433e5374b6111ab85a49b5c0f213",
     "model_family": "Ridge(alpha=1.0)",
     "provenance": "Fold-local out-of-fold S3 consistency residual from Ridge(alpha=1.0)"
   }

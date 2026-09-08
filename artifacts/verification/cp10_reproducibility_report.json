@@ -1,0 +1,10 @@
+{
+  "overall_status": "PASS",
+  "environment_verified": true,
+  "raw_hashes_verified": true,
+  "models_frozen_verified": true,
+  "prediction_reproducibility": "EXACT_MATCH_350_OF_350",
+  "submission_hash_reproducibility": "EXACT_MATCH",
+  "shuffle_invariance_verified": true,
+  "all_tests_passed": true
+}

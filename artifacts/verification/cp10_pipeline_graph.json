@@ -1,0 +1,76 @@
+{
+  "pipeline_flow": [
+    {
+      "stage": "1. Ingestion",
+      "script": "src/ingest.py",
+      "input": "data/training_data.csv",
+      "output": "artifacts/quality_report.json",
+      "train_labels_used": false,
+      "test_data_used": false
+    },
+    {
+      "stage": "2. Cleaning & Imputation",
+      "script": "src/clean_impute.py",
+      "input": "data/training_data.csv",
+      "output": "artifacts/imputation_metadata.json",
+      "train_labels_used": false,
+      "test_data_used": false
+    },
+    {
+      "stage": "3. EDA & Evidence",
+      "script": "src/eda.py",
+      "input": "data/training_data.csv",
+      "output": "artifacts/eda_summary.json",
+      "train_labels_used": true,
+      "test_data_used": false
+    },
+    {
+      "stage": "4. Operating Partitions",
+      "script": "src/feature_engineering.py",
+      "input": "data/training_data.csv",
+      "output": "artifacts/regimes/regime_model.pkl",
+      "train_labels_used": false,
+      "test_data_used": false
+    },
+    {
+      "stage": "5. Consistency Layer",
+      "script": "src/sensor_consistency.py",
+      "input": "data/training_data.csv",
+      "output": "artifacts/validity/s3_consistency_oof.csv",
+      "train_labels_used": false,
+      "test_data_used": false
+    },
+    {
+      "stage": "6. Hybrid Validity Classifier",
+      "script": "src/validity_engine.py",
+      "input": "data/training_data.csv",
+      "output": "artifacts/validity/validity_oof.csv",
+      "train_labels_used": true,
+      "test_data_used": false
+    },
+    {
+      "stage": "7. Reference Parameter Regression",
+      "script": "src/reference_regression.py",
+      "input": "data/training_data.csv",
+      "output": "artifacts/regression/oof_predictions.csv",
+      "train_labels_used": true,
+      "test_data_used": false
+    },
+    {
+      "stage": "8. Uncertainty & Attention",
+      "script": "src/uncertainty_pipeline.py",
+      "input": "artifacts/validity/validity_test.csv",
+      "output": "artifacts/uncertainty/test_attention_ranked.csv",
+      "train_labels_used": false,
+      "test_data_used": true
+    },
+    {
+      "stage": "9. Final Submission Output",
+      "script": "src/final_submission_pipeline.py",
+      "input": "artifacts/uncertainty/attention_breakdown.csv",
+      "output": "outputs/TeamName.csv",
+      "train_labels_used": false,
+      "test_data_used": true
+    }
+  ]
+}

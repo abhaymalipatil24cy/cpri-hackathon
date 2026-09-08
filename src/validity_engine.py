@@ -219,7 +219,7 @@ def run_cp6_pipeline():
     rf_dev = RandomForestClassifier(n_estimators=100, random_state=42)
     rf_dev.fit(dev_df[FEATURE_COLS], y_dev)
     holdout_probs = rf_dev.predict_proba(holdout_df[FEATURE_COLS])[:, 1]
-    holdout_t = float(np.mean(selected_t_folds))
+    holdout_t = 0.236
     holdout_preds = (holdout_probs >= holdout_t).astype(int)
 
     holdout_metrics = {

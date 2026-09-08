@@ -1,0 +1,14 @@
+{
+  "checkpoint": "CP10",
+  "os": "Windows-11-10.0.26200-SP0",
+  "python_version": "3.14.4",
+  "working_directory": "C:\\Users\\ROG\\cpri-hackathon",
+  "random_seed": 42,
+  "raw_training_hash": "fcb977165f73c3772bfa595de415244f7589766b320fd9aaebbc0cc665b31aaa",
+  "raw_test_hash": "cbb8aa49ecd68fb29dd2164b13f3052b86fc749d88882640dcce060d71c5a53f",
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.6.0+"
+  }
+}

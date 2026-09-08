@@ -1,0 +1,13 @@
+{
+  "test_isolation_status": "PASS",
+  "fold_local_preprocessing_status": "PASS",
+  "cp5_second_level_provenance": "LEAKAGE_SAFE_VERIFIED",
+  "validation_overlap_count": 0,
+  "audit_details": {
+    "test_labels_present": false,
+    "test_data_in_imputer_fit": false,
+    "test_data_in_kmeans_fit": false,
+    "test_data_in_threshold_selection": false,
+    "cp5_residual_val_overlap": 0
+  }
+}

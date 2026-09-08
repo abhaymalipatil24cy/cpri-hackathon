@@ -2,7 +2,7 @@
   "checkpoint": "CP6",
   "random_state": 42,
   "selected_model": "Random Forest",
-  "threshold": 0.28,
+  "threshold": 0.236,
   "oof_row_count": 1000,
   "test_row_count": 350,
   "reproducibility_status": "verified",

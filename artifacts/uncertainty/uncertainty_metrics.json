@@ -4,7 +4,7 @@
   "train_validity_margin_mean": 0.45168,
   "test_validity_margin_mean": 0.47488571428571424,
   "train_cv_validity_disagreement_mean": 0.009634066872475469,
-  "test_cv_validity_disagreement_mean": 0.007844746514098711,
+  "test_cv_validity_disagreement_mean": 0.00784474651409871,
   "train_cv_regression_disagreement_mean": 0.3546309582687259,
   "test_cv_regression_disagreement_mean": 0.4130288876702443,
   "train_attention_score_mean": 1.884172071950053,

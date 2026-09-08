@@ -1,0 +1,8 @@
+{
+  "submission_hash_match": true,
+  "expected_submission_hash": "5586561015bec10b02ebf00a2491e42b9670ab6b8ce54aed89e0393e3dfaf67c",
+  "current_submission_hash": "5586561015bec10b02ebf00a2491e42b9670ab6b8ce54aed89e0393e3dfaf67c",
+  "final_test_audit_hash": "1b07a1e30f59ec5e11b31b593c6e4535badbde84d9526670b5febba7195e2231",
+  "freeze_manifest_hash": "0866bc2f43cf18189c254ae1161d193376b1617e4cdd927fb4978748cdcd2750",
+  "executive_summary_hash": "126a6236b6c5228f36a449575d9fb5f2942eb14823e5b1f0455442e87762c5be"
+}

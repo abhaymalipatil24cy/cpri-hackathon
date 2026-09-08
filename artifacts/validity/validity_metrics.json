@@ -72,7 +72,7 @@
     }
   },
   "locked_holdout": {
-    "threshold_used": 0.28,
+    "threshold_used": 0.236,
     "Accuracy": 0.97,
     "Balanced_Accuracy": 0.9357739242132306,
     "Invalid_Precision": 0.8888888888888888,
