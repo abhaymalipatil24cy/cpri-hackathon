@@ -1,0 +1,15 @@
+{
+  "imputation_leakage_audit": {
+    "was_cp2_full_training_imputation_used_in_cp5_cv": true,
+    "is_preprocessing_leakage": true,
+    "corrected_in_cp5_1": true,
+    "impact_description": "Original CP5 used CP2 imputed training set across all CV folds. CP5.1 fits imputer strictly fold-locally from raw training_data.csv. Quantitative metric impact is negligible (MAE delta -0.0002) due to low overall missingness (15 cells)."
+  },
+  "threshold_origin_audit": {
+    "was_2_0_specified_before_examining_labels": false,
+    "was_it_inherited_from_preexisting_domain_rule": false,
+    "was_it_selected_after_examining_residual_distributions": true,
+    "was_it_selected_after_examining_valid_invalid_labels": true,
+    "classification": "Exploratory post-hoc observation"
+  }
+}

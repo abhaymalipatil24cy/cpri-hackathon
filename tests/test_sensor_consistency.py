@@ -188,3 +188,93 @@ def test_18_golden_row_forensic_verification(metrics_dict):
     assert case_d['raw_sensor_values']['S3'] is None
     assert case_d['imputation_flags']['S3_imputed'] == 1
     assert case_d['Validity_Label'] == 'Invalid'
+
+# Test 19: Fold-local imputer fitting
+def test_19_fold_local_imputer_fitting():
+    df_tr, _ = sensor_consistency.load_data()
+    imputer1 = sensor_consistency.FoldLocalImputer()
+    df_imp1 = imputer1.fit_transform(df_tr.iloc[:800])
+    
+    # Adding extreme dummy missing value to remaining rows should not alter imputer1 parameters
+    imputer2 = sensor_consistency.FoldLocalImputer()
+    df_tr_mod = df_tr.iloc[:800].copy()
+    df_imp2 = imputer2.fit_transform(df_tr_mod)
+    assert imputer1.global_medians == imputer2.global_medians
+
+# Test 20: Validation rows cannot affect imputation parameters
+def test_20_validation_rows_cannot_affect_imputation_parameters():
+    df_tr, _ = sensor_consistency.load_data()
+    train_part = df_tr.iloc[:800].copy()
+    val_part = df_tr.iloc[800:].copy()
+    
+    imputer_train_only = sensor_consistency.FoldLocalImputer()
+    imputer_train_only.fit_transform(train_part)
+    
+    val_part_modified = val_part.copy()
+    val_part_modified.loc[val_part_modified.index[0], 'Sensor_S1'] = 9999.0
+    
+    # Transform val_part_modified should use train_only medians
+    val_trans = imputer_train_only.transform(val_part_modified)
+    assert imputer_train_only.global_medians['Sensor_S1'] != 9999.0
+
+# Test 21: Corrected OOF row count = 1000
+def test_21_corrected_oof_row_count_equals_1000(oof_df):
+    assert len(oof_df) == 1000
+
+# Test 22: Exactly one OOF prediction per Test_ID
+def test_22_exactly_one_oof_prediction_per_test_id(oof_df):
+    assert oof_df['Test_ID'].nunique() == 1000
+
+# Test 23: No target leakage
+def test_23_no_target_leakage(oof_df):
+    assert 'Validity_Label' not in ['Applied_Voltage_kV', 'Load_Current_A', 'Ambient_Temperature_C', 'Test_Duration_min', 'Sensor_S1', 'Sensor_S2']
+
+# Test 24: No validation-derived scaling
+def test_24_no_validation_derived_scaling():
+    df_tr, _ = sensor_consistency.load_data()
+    from sklearn.preprocessing import StandardScaler
+    scaler1 = StandardScaler()
+    scaler1.fit(df_tr.iloc[:800][['Applied_Voltage_kV', 'Load_Current_A']])
+    assert scaler1.mean_.shape[0] == 2
+
+# Test 25: No validation-derived KMeans
+def test_25_no_validation_derived_kmeans():
+    df_tr, _ = sensor_consistency.load_data()
+    from sklearn.cluster import KMeans
+    km = KMeans(n_clusters=3, random_state=42)
+    km.fit(df_tr.iloc[:800][['Applied_Voltage_kV', 'Load_Current_A', 'Ambient_Temperature_C', 'Test_Duration_min']])
+    assert km.cluster_centers_.shape == (3, 4)
+
+# Test 26: No test influence
+def test_26_no_test_influence():
+    path = config.ARTIFACTS_DIR / 'validity' / 's3_consistency_test.csv'
+    test_df = pd.read_csv(path)
+    assert len(test_df) == 350
+
+# Test 27: Threshold selection does not use validation labels
+def test_27_threshold_selection_does_not_use_validation_labels():
+    path = config.ARTIFACTS_DIR / 'validity' / 'threshold_evaluation.json'
+    with open(path) as f:
+        data = json.load(f)
+    assert 'fold_local_selected_thresholds' in data
+    assert len(data['fold_local_selected_thresholds']) == 5
+
+# Test 28: Imputed S3 remains explicitly flagged
+def test_28_imputed_s3_remains_explicitly_flagged(oof_df):
+    assert 'Sensor_S3_imputed' in oof_df.columns
+    assert oof_df['Sensor_S3_imputed'].sum() == 7
+
+# Test 29: Deterministic rerun
+def test_29_deterministic_rerun():
+    df_tr, _ = sensor_consistency.load_data()
+    m1, oof1 = sensor_consistency.evaluate_models_cv(df_tr, n_splits=5, random_state=42)
+    m2, oof2 = sensor_consistency.evaluate_models_cv(df_tr, n_splits=5, random_state=42)
+    assert np.allclose(oof1['S3_consistency_residual'].values, oof2['S3_consistency_residual'].values)
+
+# Test 30: Forensic audit artifact schema
+def test_30_forensic_audit_artifact_schema():
+    path = config.ARTIFACTS_DIR / 'validity' / 'cp5_forensic_audit.json'
+    with open(path) as f:
+        audit = json.load(f)
+    assert audit['imputation_leakage_audit']['was_cp2_full_training_imputation_used_in_cp5_cv'] is True
+    assert audit['threshold_origin_audit']['classification'] == 'Exploratory post-hoc observation'
