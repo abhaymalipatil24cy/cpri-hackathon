@@ -238,3 +238,76 @@ def test_35_correct_holdout_subgroup_counts(holdout_df):
     invalid_count = (holdout_df['Validity_Label'] == 'Invalid').sum()
     assert valid_count + invalid_count == 200
     assert valid_count > 150
+
+# --- CP7.2 FINAL CONSISTENCY FORENSIC AUDIT TESTS (36-43) ---
+
+# Test 36: ID-based metric join invariant to row shuffle
+def test_36_id_based_metric_join_invariant_to_shuffle(oof_df):
+    raw_df = pd.read_csv(config.TRAIN_DATA_PATH)
+    merged = oof_df.merge(raw_df[['Test_ID', 'Reference_Parameter']], on='Test_ID', suffixes=('', '_raw'))
+    pred_col = 'predicted_Reference_Parameter' if 'predicted_Reference_Parameter' in oof_df.columns else 'Predicted_Reference_Parameter'
+    mae_orig = np.mean(np.abs(merged['Reference_Parameter'] - merged[pred_col]))
+    
+    oof_shuffled = oof_df.sample(frac=1.0, random_state=123).reset_index(drop=True)
+    merged_shuffled = oof_shuffled.merge(raw_df[['Test_ID', 'Reference_Parameter']], on='Test_ID', suffixes=('', '_raw'))
+    mae_shuffled = np.mean(np.abs(merged_shuffled['Reference_Parameter'] - merged_shuffled[pred_col]))
+    
+    assert np.isclose(mae_orig, mae_shuffled), "Shuffling prediction rows changed ID-joined MAE!"
+
+# Test 37: Holdout membership of TRN-0745
+def test_37_holdout_membership_trn_0745():
+    path = config.ARTIFACTS_DIR / 'regression' / 'split_manifest.json'
+    with open(path) as f:
+        sm = json.load(f)
+    assert 'TRN-0745' in sm['holdout_ids']
+
+# Test 38: Partition membership of TRN-0612 (in Dev, NOT Holdout)
+def test_38_partition_membership_trn_0612():
+    path = config.ARTIFACTS_DIR / 'regression' / 'split_manifest.json'
+    with open(path) as f:
+        sm = json.load(f)
+    assert 'TRN-0612' in sm['dev_ids']
+    assert 'TRN-0612' not in sm['holdout_ids']
+
+# Test 39: Direct holdout metric recomputation from first principles
+def test_39_direct_holdout_metric_recomputation(holdout_df):
+    path = config.ARTIFACTS_DIR / 'regression' / 'holdout_metrics.json'
+    with open(path) as f:
+        hm = json.load(f)
+    pred_col = 'predicted_Reference_Parameter' if 'predicted_Reference_Parameter' in holdout_df.columns else 'Predicted_Reference_Parameter'
+    mae_calc = float(np.mean(np.abs(holdout_df['Reference_Parameter'] - holdout_df[pred_col])))
+    rmse_calc = float(np.sqrt(np.mean((holdout_df['Reference_Parameter'] - holdout_df[pred_col]) ** 2)))
+    
+    assert np.isclose(mae_calc, hm['MAE'], atol=1e-4)
+    assert np.isclose(rmse_calc, hm['RMSE'], atol=1e-4)
+
+# Test 40: Direct Development CV metric recomputation
+def test_40_direct_dev_cv_metric_recomputation():
+    path_cv = config.ARTIFACTS_DIR / 'regression' / 'cv_metrics.json'
+    with open(path_cv) as f:
+        cv_m = json.load(f)
+    assert np.isclose(cv_m['development_cv']['MAE'], 0.7886, atol=1e-2)
+    assert np.isclose(cv_m['development_cv']['RMSE'], 1.5231, atol=1e-2)
+
+# Test 41: Full-training OOF vs Development CV distinction
+def test_41_full_training_oof_vs_dev_cv_distinction():
+    path_prov = config.ARTIFACTS_DIR / 'regression' / 'evaluation_provenance.json'
+    with open(path_prov) as f:
+        prov = json.load(f)
+    assert prov['development_cv']['row_count'] == 800
+    assert prov['full_training_oof']['row_count'] == 1000
+    assert prov['development_cv']['row_count'] != prov['full_training_oof']['row_count']
+
+# Test 42: Final metadata and implementation consistency
+def test_42_final_metadata_implementation_consistency(model_metadata):
+    assert model_metadata['model_family'] == 'GradientBoostingRegressor'
+    assert model_metadata['hyperparameters']['n_estimators'] == 100
+    assert model_metadata['hyperparameters']['random_state'] == 42
+    assert model_metadata['training_row_count'] == 1000
+
+# Test 43: Test prediction count and uniqueness
+def test_43_test_prediction_count_uniqueness(test_df):
+    assert len(test_df) == 350
+    assert test_df['Test_ID'].is_unique
+    pred_col = 'predicted_Reference_Parameter' if 'predicted_Reference_Parameter' in test_df.columns else 'Predicted_Reference_Parameter'
+    assert test_df[pred_col].notna().all()

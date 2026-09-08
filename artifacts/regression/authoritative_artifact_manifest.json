@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-09-08T23:20:15.860169",
+  "policy": "Single authoritative source registry for CP7 reference parameter regression",
+  "artifacts": {
+    "training_raw_data": {
+      "path": "data/training_data.csv",
+      "sha256": "fcb977165f73c3772bfa595de415244f7589766b320fd9aaebbc0cc665b31aaa",
+      "row_count": 1000,
+      "id_column": "Test_ID",
+      "id_uniqueness": true,
+      "generating_script": "CP0 pipeline / raw data ingestion",
+      "model_identity": "N/A (Ground Truth)"
+    },
+    "split_manifest": {
+      "path": "artifacts/regression/split_manifest.json",
+      "sha256": "0caf748aa39e2db6160e4c178c771fe157183c536e3c1e3abe8d651ea5d50cfc",
+      "row_count": 1000,
+      "id_column": "dev_ids, holdout_ids",
+      "id_uniqueness": true,
+      "generating_script": "src/reference_regression.py",
+      "model_identity": "Stratified 80/20 train_test_split (seed=42)"
+    },
+    "development_oof_predictions": {
+      "path": "artifacts/regression/oof_predictions.csv",
+      "sha256": "c94058af2def25131fbd33b29f03ba191ff32548a10ccdc69c6578c3c22993ba",
+      "row_count": 1000,
+      "id_column": "Test_ID",
+      "id_uniqueness": true,
+      "generating_script": "src/reference_regression.py",
+      "model_identity": "GradientBoostingRegressor (n_estimators=100, random_state=42)"
+    },
+    "locked_holdout_predictions": {
+      "path": "artifacts/regression/holdout_predictions.csv",
+      "sha256": "97795057608756860e61a0a106c0e7ba673fc01a6239fc403c3b04677a543d7c",
+      "row_count": 200,
+      "id_column": "Test_ID",
+      "id_uniqueness": true,
+      "generating_script": "src/reference_regression.py",
+      "model_identity": "GradientBoostingRegressor (trained on 800-row Dev set)"
+    },
+    "test_predictions": {
+      "path": "artifacts/regression/test_predictions.csv",
+      "sha256": "df7b87f862f7cacb81d537f88b8ac33f640ad49ac1a6c88eee10d14e00e49fa1",
+      "row_count": 350,
+      "id_column": "Test_ID",
+      "id_uniqueness": true,
+      "generating_script": "src/reference_regression.py",
+      "model_identity": "GradientBoostingRegressor (trained on 1000-row full training set)"
+    }
+  }
+}
