@@ -1,0 +1,122 @@
+{
+  "reconciliation_status": "RESOLVED",
+  "authoritative_cp6_metrics": {
+    "cp6_dev_fixed_threshold_f1_at_0_236": 0.933333,
+    "cp6_dev_fold_tuned_oof_f1": 0.931408,
+    "cp6_dev_fixed_threshold_f1_at_0_500": 0.931373,
+    "cp6_locked_holdout_primary_f1_at_0_236": 0.888889,
+    "cp6_locked_holdout_oof_slice_f1_at_0_236": 0.892857,
+    "cp6_locked_holdout_primary_f1_at_0_500": 0.84
+  },
+  "population_provenance": {
+    "full_1000_row_dataset_at_0_236": {
+      "total_rows": 1000,
+      "invalid_count": 134,
+      "valid_count": 866,
+      "confusion_matrix": {
+        "tn": 849,
+        "fp": 17,
+        "fn": 4,
+        "tp": 130
+      },
+      "sum_check_passed": true,
+      "precision": 0.884354,
+      "recall": 0.970149,
+      "f1": 0.925267,
+      "role": "Full 1000-Row Dataset Evaluation at 0.236"
+    },
+    "development_population_800_rows_at_0_236": {
+      "total_rows": 800,
+      "invalid_count": 107,
+      "valid_count": 693,
+      "split_source": "artifacts/regression/split_manifest.json (dev_ids)",
+      "confusion_matrix": {
+        "tn": 680,
+        "fp": 13,
+        "fn": 2,
+        "tp": 105
+      },
+      "sum_check_passed": true,
+      "precision": 0.889831,
+      "recall": 0.981308,
+      "f1": 0.933333,
+      "role": "Direct Dev OOF Evaluation at Operational Threshold 0.236"
+    },
+    "development_population_800_rows_at_0_500": {
+      "total_rows": 800,
+      "invalid_count": 107,
+      "valid_count": 693,
+      "split_source": "artifacts/regression/split_manifest.json (dev_ids)",
+      "confusion_matrix": {
+        "tn": 691,
+        "fp": 2,
+        "fn": 12,
+        "tp": 95
+      },
+      "sum_check_passed": true,
+      "precision": 0.979381,
+      "recall": 0.88785,
+      "f1": 0.931373,
+      "role": "Direct Dev OOF Evaluation at Default Threshold 0.500"
+    },
+    "development_tuned_cv_benchmark_at_0_236": {
+      "total_rows": 800,
+      "invalid_count": 107,
+      "valid_count": 693,
+      "confusion_matrix": {
+        "tn": 652,
+        "fp": 14,
+        "fn": 5,
+        "tp": 129
+      },
+      "sum_check_passed": true,
+      "precision": 0.902098,
+      "recall": 0.962687,
+      "f1": 0.931408,
+      "role": "5-Fold Fold-Tuned Cross-Validation Benchmark Population (N=800)"
+    },
+    "locked_holdout_primary_evaluation_at_0_236": {
+      "total_rows": 200,
+      "invalid_count": 27,
+      "valid_count": 173,
+      "split_source": "artifacts/validity/validity_metrics.json (locked_holdout)",
+      "confusion_matrix": {
+        "tn": 170,
+        "fp": 3,
+        "fn": 3,
+        "tp": 24
+      },
+      "sum_check_passed": true,
+      "precision": 0.888889,
+      "recall": 0.888889,
+      "f1": 0.888889,
+      "role": "Authoritative Primary Locked Holdout Evaluation of rf_dev Model (Result A)"
+    },
+    "locked_holdout_oof_slice_at_0_236": {
+      "total_rows": 200,
+      "invalid_count": 27,
+      "valid_count": 173,
+      "split_source": "artifacts/validity/validity_oof.csv (holdout_ids)",
+      "confusion_matrix": {
+        "tn": 169,
+        "fp": 4,
+        "fn": 2,
+        "tp": 25
+      },
+      "sum_check_passed": true,
+      "precision": 0.862069,
+      "recall": 0.925926,
+      "f1": 0.892857,
+      "role": "Out-of-Fold 5-Fold CV Prediction Subgroup Metric for Holdout IDs (Result B)"
+    }
+  },
+  "holdout_reconciliation_details": {
+    "differing_test_ids": [
+      "TRN-0837",
+      "TRN-0410"
+    ],
+    "test_id_trn_0837_details": "TRN-0837 (Label: Invalid): rf_dev single model predicted prob=0.100000 (<0.236) -> FN (Result A). OOF 5-fold CV predicted prob=0.350000 (>=0.236) -> TP (Result B).",
+    "test_id_trn_0410_details": "TRN-0410 (Label: Valid): Result A rf_dev model predicted prob < 0.236 -> TN. Result B OOF CV fold model predicted prob=0.240000 (>=0.236) -> FP.",
+    "provenance_resolution": "Result A (0.888889, TN=170, FP=3, FN=3, TP=24) is the authoritative primary locked holdout metric of the development-fitted model (rf_dev). Result B (0.892857, TN=169, FP=4, FN=2, TP=25) is the OOF CV fold slice."
+  }
+}

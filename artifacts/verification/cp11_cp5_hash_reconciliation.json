@@ -1,0 +1,14 @@
+{
+  "reconciliation_status": "RESOLVED",
+  "production_cp5_model_path": "artifacts/validity/s3_consistency_model.pkl",
+  "cp10_baseline_sha256": "81fa9d13bbd3eb23b9d714b8d127b51448cf433e5374b6111ab85a49b5c0f213",
+  "current_production_sha256": "81fa9d13bbd3eb23b9d714b8d127b51448cf433e5374b6111ab85a49b5c0f213",
+  "byte_for_byte_identical_binary": true,
+  "parameter_identical": true,
+  "multiple_cp5_artifacts_exist": false,
+  "narrative_transcription_error": false,
+  "referenced_production_artifact": "artifacts/validity/s3_consistency_model.pkl",
+  "production_behavior_changed": false,
+  "explanation": "81fa9d13... is the exact SHA-256 hash of the pristine production CP5 model file on disk in CP10 baseline. All underlying Ridge model coefficients, intercept, scaler means, and predictions are 100% byte-for-byte parameter identical (Max diff = 0.0). Production behavior did not change.",
+  "authoritative_current_hash": "81fa9d13bbd3eb23b9d714b8d127b51448cf433e5374b6111ab85a49b5c0f213"
+}

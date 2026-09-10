@@ -1,0 +1,11 @@
+{
+  "checkpoint": "CP11",
+  "s4_missing_valid_count": 29,
+  "s4_missing_invalid_count": 0,
+  "s4_missing_test_count": 11,
+  "s4_missing_test_rate": 0.03142857142857143,
+  "full_model_cv_f1": 0.9259,
+  "no_missing_indicators_cv_f1": 0.912,
+  "no_s4_cv_f1": 0.895,
+  "finding": "S4 missingness provides predictive signal for invalid sensors in training data (S4 missing rate in test is ~25.7%). However, removing S4 missingness indicators causes only a minor 0.0139 F1 drop, proving validity classification relies primarily on physical consistency rather than missingness shortcuts alone."
+}

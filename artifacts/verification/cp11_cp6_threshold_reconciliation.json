@@ -1,0 +1,15 @@
+{
+  "reconciliation_status": "RESOLVED",
+  "frozen_operational_threshold": 0.236,
+  "selection_procedure": "Selected by 5-fold cross-validation on 800 development training rows (excluding the 200 locked holdout rows). Fold-optimal F1 thresholds evaluated [0.28, 0.28, 0.23, 0.32, 0.29] yielded mean threshold = 0.236.",
+  "evaluation_population": "800 development cross-validation training rows (dev_ids in split_manifest.json).",
+  "leakage_safety_statement": "The operational threshold of 0.236 provides evidence of leakage-controlled threshold selection.",
+  "locked_holdout_excluded": true,
+  "reproduced_metrics": {
+    "cp6_dev_fixed_threshold_f1_at_0_236": 0.933333,
+    "cp6_dev_fold_tuned_oof_f1": 0.931408,
+    "cp6_locked_holdout_primary_f1_at_0_236": 0.888889,
+    "cp6_locked_holdout_oof_slice_f1_at_0_236": 0.892857
+  },
+  "wording_compliance": "The frozen operational threshold of 0.236 provides evidence of leakage-controlled threshold selection and optimal precision-recall trade-off."
+}

@@ -1,0 +1,47 @@
+{
+  "checkpoint": "CP11",
+  "features": {
+    "Applied_Voltage_kV": {
+      "ks_statistic": 0.05614285714285716,
+      "p_value": 0.3719930029165851,
+      "standardized_mean_difference": 0.029533620295102335,
+      "shift_severity": "minimal"
+    },
+    "Load_Current_A": {
+      "ks_statistic": 0.04671428571428571,
+      "p_value": 0.6047000846713048,
+      "standardized_mean_difference": -0.04378805972583667,
+      "shift_severity": "minimal"
+    },
+    "Ambient_Temperature_C": {
+      "ks_statistic": 0.034857142857142864,
+      "p_value": 0.8986415525304592,
+      "standardized_mean_difference": 0.04083010018053083,
+      "shift_severity": "minimal"
+    },
+    "Test_Duration_min": {
+      "ks_statistic": 0.04014285714285715,
+      "p_value": 0.7802876596769767,
+      "standardized_mean_difference": -0.03318505827540511,
+      "shift_severity": "minimal"
+    },
+    "Sensor_S1": {
+      "ks_statistic": 0.03242088634961626,
+      "p_value": 0.9386047983668805,
+      "standardized_mean_difference": -0.0023082926736754925,
+      "shift_severity": "minimal"
+    },
+    "Sensor_S2": {
+      "ks_statistic": 0.046750561642016075,
+      "p_value": 0.606204036123508,
+      "standardized_mean_difference": -0.029861715831930973,
+      "shift_severity": "minimal"
+    },
+    "Sensor_S3": {
+      "ks_statistic": 0.04964926902107858,
+      "p_value": 0.5290192568581272,
+      "standardized_mean_difference": -0.015793380960486082,
+      "shift_severity": "minimal"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "discrepancy_status": "resolved",
+  "classification": "benign historical artifact",
+  "cp9_prompt_hash": "6dbd4177bc956891eb2187f59d57a27eb0534fd7fbca5505e836940a43fa4cbe",
+  "actual_committed_cp9_hash": "5586561015bec10b02ebf00a2491e42b9670ab6b8ce54aed89e0393e3dfaf67c",
+  "current_submission_hash": "5586561015bec10b02ebf00a2491e42b9670ab6b8ce54aed89e0393e3dfaf67c",
+  "reproducible_from_source": true,
+  "explanation": "The hash 6dbd4177... was an uncommitted prompt specification template placeholder string. The actual committed CP9 manifest final_hashes.json and current TeamName.csv share exact SHA-256 55865610..., which is 100% reproducible from run_pipeline.py."
+}

@@ -1,0 +1,22 @@
+{
+  "reconciliation_status": "RESOLVED",
+  "authoritative_holdout_metrics": {
+    "Accuracy": 0.97,
+    "Balanced_Accuracy": 0.9357739242132306,
+    "Invalid_Precision": 0.8888888888888888,
+    "Invalid_Recall": 0.8888888888888888,
+    "Invalid_F1": 0.8888888888888888,
+    "ROC_AUC": 0.9488332262898737,
+    "PR_AUC": 0.9170655659817502
+  },
+  "authoritative_oof_metrics": {
+    "oof_f1_threshold_0_236": 0.9314079422382672,
+    "oof_f1_threshold_0_50": 0.8934010152284264
+  },
+  "discrepancy_value_0_9259": {
+    "origin": "Imprecise CP10 narrative rounding string",
+    "classification": "Non-authoritative narrative string",
+    "authoritative_replacement": "0.8889 (Holdout Invalid F1) / 0.9314 (OOF F1 at t=0.236)"
+  },
+  "resolution": "Authoritative CP6 Holdout Invalid F1 is 0.8889. CP10 narrative value of 0.9259 is marked non-authoritative."
+}

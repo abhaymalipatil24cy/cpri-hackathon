@@ -1,0 +1,63 @@
+{
+  "reconciliation_status": "RESOLVED",
+  "underlying_artifacts": [
+    "artifacts/regression/holdout_predictions.csv",
+    "artifacts/regression/validity_metrics.csv",
+    "artifacts/regression/split_manifest.json"
+  ],
+  "holdout_population": {
+    "total_rows": 200,
+    "valid_rows_count": 173,
+    "invalid_rows_count": 27,
+    "invalid_test_ids": [
+      "TRN-0479",
+      "TRN-0267",
+      "TRN-0878",
+      "TRN-0406",
+      "TRN-0968",
+      "TRN-0168",
+      "TRN-0589",
+      "TRN-0154",
+      "TRN-0745",
+      "TRN-0950",
+      "TRN-0081",
+      "TRN-0410",
+      "TRN-0837",
+      "TRN-0005",
+      "TRN-0402",
+      "TRN-0535",
+      "TRN-0108",
+      "TRN-0888",
+      "TRN-0692",
+      "TRN-0121",
+      "TRN-0768",
+      "TRN-0097",
+      "TRN-0148",
+      "TRN-0883",
+      "TRN-0185",
+      "TRN-0077",
+      "TRN-0533"
+    ]
+  },
+  "exact_raw_reconstruction": {
+    "y_true_column": "Reference_Parameter",
+    "y_pred_column": "predicted_Reference_Parameter",
+    "mae_formula": "MAE = (1 / N) * sum(|y_true_i - y_pred_i|)",
+    "invalid_subgroup_mae_raw_float": 4.506470599037418,
+    "invalid_subgroup_mae_rounded": 4.506471,
+    "valid_subgroup_mae_raw_float": 0.7506407525805626,
+    "valid_subgroup_mae_rounded": 0.750641,
+    "total_holdout_mae_raw_float": 1.2576777818522382,
+    "total_holdout_mae_rounded": 1.257678,
+    "predictions_rounded_before_calculation": false,
+    "validity_labels_source": "Locked 20% Holdout Target Labels (artifacts/regression/split_manifest.json)",
+    "identical_evaluation_population": true
+  },
+  "discrepancy_explanation": {
+    "narrative_typo_value": 4.500962,
+    "artifact_backed_value": 4.506471,
+    "reason": "4.500962 was an imprecise narrative documentation typo introduced in early CP7.2 report text. 4.506471 (exact float: 4.506470599037419) is the exact, unrounded, artifact-backed calculation directly from artifacts/regression/holdout_predictions.csv (27 Invalid holdout rows) and recorded in artifacts/regression/validity_metrics.csv."
+  },
+  "one_authoritative_value": 4.506471,
+  "authoritative_reason": "4.506471 is mathematically exact and 100% reproducible directly from the 27 Invalid holdout prediction rows in artifacts/regression/holdout_predictions.csv and matches artifacts/regression/validity_metrics.csv."
+}

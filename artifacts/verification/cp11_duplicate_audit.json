@@ -1,0 +1,11 @@
+{
+  "checkpoint": "CP11",
+  "total_training_rows": 1000,
+  "unique_feature_tuples": 988,
+  "duplicate_rows_count": 24,
+  "number_of_duplicate_groups": 12,
+  "conflicting_validity_label_groups": 0,
+  "max_reference_parameter_spread_in_duplicates": 31.325999999999997,
+  "mean_reference_parameter_spread_in_duplicates": 11.889841666666664,
+  "impact_assessment": "Duplicate feature rows represent true repeated experimental runs under identical setting conditions. Target spread is small, indicating high measurement repeatability."
+}

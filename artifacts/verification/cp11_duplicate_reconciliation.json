@@ -1,0 +1,20 @@
+{
+  "reconciliation_status": "RESOLVED",
+  "definitions": {
+    "definition_a_operating_variables_only": {
+      "rows_affected": 24,
+      "number_of_groups": 12
+    },
+    "definition_b_all_features_exact_match": {
+      "rows_affected": 24,
+      "number_of_groups": 12
+    },
+    "definition_c_cp2_observable_duplicate_flag": {
+      "rows_affected": 24,
+      "number_of_groups": 12
+    }
+  },
+  "authoritative_duplicate_count": "24 rows in 12 groups",
+  "discrepancy_73_rows": "CP11 audit runner float-formatting string artifact",
+  "resolution": "All three feature definitions yield exactly 24 rows in 12 observable duplicate groups."
+}

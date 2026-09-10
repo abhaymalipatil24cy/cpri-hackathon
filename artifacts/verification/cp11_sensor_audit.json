@@ -1,0 +1,26 @@
+{
+  "checkpoint": "CP11",
+  "top_features": [
+    {
+      "feature": "S3_consistency_residual",
+      "importance": 0.2845
+    },
+    {
+      "feature": "S3_clean",
+      "importance": 0.182
+    },
+    {
+      "feature": "S3_minus_S1",
+      "importance": 0.125
+    },
+    {
+      "feature": "S3_to_S1_ratio",
+      "importance": 0.098
+    },
+    {
+      "feature": "Applied_Voltage_kV",
+      "importance": 0.065
+    }
+  ],
+  "finding": "S3 consistency residual and S3 sensor derived ratios dominate validity classification. S3 is the primary sensor subject to insulation degradation anomalies, aligning with physical domain expectations."
+}

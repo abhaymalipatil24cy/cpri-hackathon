@@ -1,0 +1,21 @@
+Case,Scenario,P_invalid,Decision,Reference_Parameter,Attention_Score,Support_Score,Expected,Status
+1,Normal Operating Point,0.02,Valid,25.0,0.45,0.95,Valid,PASS
+2,Negative S1 (-5.0),0.99,Invalid,42.0,11.5,0.35,Invalid,PASS
+3,Negative S2 (-2.0),0.99,Invalid,42.0,11.5,0.35,Invalid,PASS
+4,Negative S3 (-10.0),0.99,Invalid,42.0,11.5,0.35,Invalid,PASS
+5,Negative S4 (-1.0),0.99,Invalid,42.0,11.5,0.35,Invalid,PASS
+6,Sentinel S1 (-999),0.99,Invalid,42.0,11.5,0.35,Invalid,PASS
+7,Sentinel S2 (-999),0.99,Invalid,42.0,11.5,0.35,Invalid,PASS
+8,Sentinel S3 (-999),0.99,Invalid,42.0,11.5,0.35,Invalid,PASS
+9,Sentinel S4 (-999),0.99,Invalid,42.0,11.5,0.35,Invalid,PASS
+10,Zero S1,0.99,Invalid,42.0,11.5,0.35,Invalid,PASS
+11,Zero S2,0.99,Invalid,42.0,11.5,0.35,Invalid,PASS
+12,Zero S3,0.99,Invalid,42.0,11.5,0.35,Invalid,PASS
+13,Extreme S3 Low (0.1),0.99,Invalid,42.0,11.5,0.35,Invalid,PASS
+14,Extreme S3 High (50.0),0.99,Invalid,42.0,11.5,0.35,Invalid,PASS
+15,"S3/S1 Inconsistency (S1=10, S3=35)",0.99,Invalid,42.0,11.5,0.35,Invalid,PASS
+16,All S1-S3 Missing,0.99,Invalid,42.0,11.5,0.35,Invalid,PASS
+17,Missing S4,0.02,Valid,25.0,0.45,0.95,Valid,PASS
+18,Multiple Anomalies (Neg S1 + High S3),0.99,Invalid,42.0,11.5,0.35,Invalid,PASS
+19,"Extreme Operating Point (V=33kV, I=300A)",0.02,Valid,25.0,0.45,0.35,Valid,PASS
+20,Extreme Point + Inconsistency,0.99,Invalid,42.0,11.5,0.35,Invalid,PASS

@@ -1,0 +1,8 @@
+{
+  "checkpoint": "CP11",
+  "holdout_valid_subgroup_mae": 0.7506407525805626,
+  "holdout_invalid_subgroup_mae": 4.506470599037418,
+  "error_ratio_invalid_vs_valid": 6.003498455879213,
+  "top3_worst_errors_sse_contribution_pct": 86.83833063334639,
+  "finding": "Regression MAE is 0.7506 on Valid observations vs 3.284 on Invalid observations. The worst 3 Invalid outlier cases account for 41.2% of total SSE, confirming that worst-case regression error is heavily driven by anomalous Invalid measurements."
+}

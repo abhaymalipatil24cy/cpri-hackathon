@@ -1,0 +1,15 @@
+{
+  "checkpoint": "CP11",
+  "repository_commit": "cd066117cddd63e936733c329f01e74d7535bb11",
+  "random_seed": 42,
+  "raw_training_hash": "fcb977165f73c3772bfa595de415244f7589766b320fd9aaebbc0cc665b31aaa",
+  "raw_test_hash": "cbb8aa49ecd68fb29dd2164b13f3052b86fc749d88882640dcce060d71c5a53f",
+  "submission_hash": "5586561015bec10b02ebf00a2491e42b9670ab6b8ce54aed89e0393e3dfaf67c",
+  "final_audit_hash": "e8618a8115f6b9cc97daffaa46b38787b2a4a66e64dff31a4b52e3901b0686bc",
+  "cp5_model_hash": "68e029fbdc328815eec4fca1221cca92b842295357e95ec3c223d3def64ad1e0",
+  "cp6_model_hash": "e0aa655a3b19d587a1fa0901ee7a600a6eba3e13171e65fadc60401703f569b1",
+  "cp7_model_metadata_hash": "4af06df714079e8337bbb1c3c0c7fed386edfb37026ffb26e96da529d71edbf7",
+  "cp8_frozen_manifest_hash": "4364f15b633da8323bf50bdc3a30b781de14ca11e7c2629e3550fec1a564e210",
+  "cp9_freeze_manifest_hash": "7693c29c0cd4f72e8129f3e6195a7fa3525e3fd1c353b40a59ff449062d5fc0b",
+  "cp10_reproducibility_report_hash": "e8fef0c5cac3db583f584273962180623ba800953f97b86a3d052249830868a9"
+}

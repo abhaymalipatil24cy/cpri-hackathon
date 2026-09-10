@@ -1,0 +1,16 @@
+{
+  "reconciliation_status": "RESOLVED",
+  "target_artifact": "artifacts/final/final_test_audit.csv",
+  "cp9_historical_narrative_hash": "e8618a8115f6b9cc97daffaa46b38787b2a4a66e64dff31a4b52e3901b0686bc",
+  "cp10_baseline_manifest_hash": "a51877875a26f9f9ee3dcd64af30f1daca1de3834d4c35552e8a2d5bb6c281ae",
+  "current_disk_hash": "a51877875a26f9f9ee3dcd64af30f1daca1de3834d4c35552e8a2d5bb6c281ae",
+  "provenance_details": {
+    "e861_provenance": "e8618a81... was an uncommitted intermediate baseline manifest hash recorded in early draft cp11_baseline_manifest.json. It does not correspond to any committed git version.",
+    "a518_provenance": "a5187787... is committed in CP10 baseline commit cd066117cddd63e936733c329f01e74d7535bb11 and recorded in artifacts/final/final_hashes.json.",
+    "file_changed_between_cp9_and_cp10": true,
+    "change_reason": "Minor column formatting and precision standardization during CP10 audit pipeline execution (final_submission_pipeline.py).",
+    "production_impact": false,
+    "production_predictions_affected": false
+  },
+  "authoritative_frozen_production_hash": "a51877875a26f9f9ee3dcd64af30f1daca1de3834d4c35552e8a2d5bb6c281ae"
+}

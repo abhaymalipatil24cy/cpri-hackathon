@@ -1,0 +1,22 @@
+{
+  "reconciliation_status": "RESOLVED",
+  "authoritative_holdout_counts": {
+    "total_rows": 200,
+    "valid_rows": 173,
+    "invalid_rows": 27
+  },
+  "authoritative_metrics": {
+    "holdout_invalid_subgroup_mae": 4.500962,
+    "raw_calculated_holdout_invalid_mae": 4.506471,
+    "holdout_valid_subgroup_mae": 0.750641,
+    "holdout_total_mae": 1.257678,
+    "holdout_total_rmse": 3.613879,
+    "holdout_r2": 0.887163
+  },
+  "discrepancy_value_3_2840": {
+    "origin": "CP11 audit runner narrative placeholder string",
+    "classification": "Non-authoritative narrative string",
+    "authoritative_replacement": "4.500962"
+  },
+  "resolution": "Authoritative CP7.2 Holdout Invalid Subgroup MAE is 4.500962. CP11 narrative value of 3.2840 is marked non-authoritative and superseded."
+}

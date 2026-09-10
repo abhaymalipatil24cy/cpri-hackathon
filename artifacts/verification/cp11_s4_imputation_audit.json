@@ -1,0 +1,9 @@
+{
+  "reconciliation_status": "RESOLVED",
+  "production_implementation": "Sensor_S4 is UNIMPUTED",
+  "training_s4_imputed_count": 0,
+  "test_s4_imputed_count": 0,
+  "s4_missing_flag_preserved": true,
+  "classification": "CP11 text error ('S4 relies on KNN imputation') superseded by authoritative CP2 rule",
+  "resolution": "Production pipeline strictly leaves S4 unimputed (Sensor_S4_imputed = 0 for all rows; Sensor_S4_missing flag preserved)."
+}

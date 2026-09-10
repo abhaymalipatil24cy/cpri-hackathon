@@ -1,0 +1,41 @@
+{
+  "reconciliation_status": "RESOLVED",
+  "items": [
+    {
+      "topic": "Attention Formula",
+      "conflicting_value": "0.35*P_invalid + 0.25*op_dist + 0.20*z_S3 + 0.10*missing + 0.10*sentinel",
+      "authoritative_value": "3.0 * flag_negative + 3.0 * flag_sentinel + 2.0 * flag_inconsist + min(|z_S3|, 10) + N_imputed + N_missing + 2.0 * (1 - 2*|P - 0.5|) + 2.0 * (1 - centroid_support)",
+      "resolution": "Reaffirmed CP8 frozen formula in attention_score_spec.json as AUTHORITATIVE PRODUCTION FORMULA."
+    },
+    {
+      "topic": "CP6 Invalid F1",
+      "conflicting_value": "0.9259",
+      "authoritative_value": "0.8889 (Holdout) / 0.9314 (OOF at t=0.236)",
+      "resolution": "Reconciled narrative string 0.9259 to authoritative CP6 holdout F1 = 0.8889."
+    },
+    {
+      "topic": "CP7 Invalid MAE",
+      "conflicting_value": "3.2840",
+      "authoritative_value": "4.500962",
+      "resolution": "Reconciled narrative string 3.2840 to authoritative CP7.2 Holdout Invalid MAE = 4.500962."
+    },
+    {
+      "topic": "Test S4 Missingness",
+      "conflicting_value": "25.7% / 29 missing",
+      "authoritative_value": "11 missing values (3.14%) in data/test_data.csv",
+      "resolution": "Raw test CSV is authoritative: test set has exactly 11 missing S4 values (3.14%)."
+    },
+    {
+      "topic": "S4 Imputation",
+      "conflicting_value": "S4 relies on KNN imputation",
+      "authoritative_value": "S4 is UNIMPUTED (Sensor_S4_imputed = 0 for all rows)",
+      "resolution": "CP11 wording error corrected; production pipeline strictly leaves S4 unimputed."
+    },
+    {
+      "topic": "Duplicate Rows",
+      "conflicting_value": "73 rows",
+      "authoritative_value": "24 rows in 12 groups",
+      "resolution": "Reconciled to exact count of 24 rows in 12 observable duplicate groups."
+    }
+  ]
+}

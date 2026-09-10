@@ -1,0 +1,17 @@
+{
+  "reconciliation_status": "RESOLVED",
+  "authoritative_raw_counts": {
+    "raw_training_rows": 1000,
+    "training_s4_missing_count": 29,
+    "training_s4_missing_rate_pct": 2.9,
+    "raw_test_rows": 350,
+    "test_s4_missing_count": 11,
+    "test_s4_missing_rate_pct": 3.14
+  },
+  "discrepancies_explained": {
+    "count_11": "Exact raw test set S4 missing count in data/test_data.csv (3.14%)",
+    "count_29": "Exact raw training set S4 missing count in data/training_data.csv (2.90%), transcribed in CP4 regime tables",
+    "pct_25_7": "CP11 narrative copy-paste error, superseded by exact count 11 (3.14%)"
+  },
+  "resolution": "Raw test file is authoritative: test set contains exactly 11 missing S4 values (3.14%)."
+}
